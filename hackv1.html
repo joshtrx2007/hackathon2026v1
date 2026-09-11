@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdant Eco Driver</title>
+<style>
+:root{--ink:#14201d;--paper:#f4f3ed;--card:#fff;--muted:#76817b;--lime:#b8e86a;--orange:#ff7046;--teal:#43b99a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}.app{max-width:1300px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}.brand{display:flex;gap:12px;align-items:center}.mark,.avatar{display:grid;place-items:center;border-radius:50%;font-weight:bold}.mark{width:36px;height:36px;background:var(--ink);color:var(--lime)}.name{font-size:20px;font-weight:bold}.tag,.eyebrow,.muted{color:var(--muted);font-size:12px}.tag{margin-top:3px}nav{display:flex;gap:28px;align-items:center}nav button{border:0;background:none;color:var(--muted);padding:8px;font-size:13px}nav button.active{color:var(--ink);font-weight:bold;border-bottom:2px solid var(--orange)}.avatar{width:38px;height:38px;background:var(--lime);font-size:12px}.intro{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}h1{font-size:clamp(32px,5vw,58px);margin:10px 0 8px;letter-spacing:-3px}h2,h3,p{margin:0}.intro p{color:var(--muted)}.status{color:var(--teal);font-size:12px;font-weight:bold;text-transform:uppercase}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-right:8px}.layout{display:grid;grid-template-columns:1.6fr .9fr;gap:22px}.stack{display:grid;gap:22px;align-content:start}.card{background:var(--card);border:1px solid #e3e7de;border-radius:18px;box-shadow:0 18px 46px #1a2f2314}.map{min-height:450px;position:relative;overflow:hidden;background:#c6dfc8}.map svg{position:absolute;width:100%;height:100%}.map:after{content:'';position:absolute;inset:0;background:linear-gradient(145deg,#fff5,#7eba9730)}.map-overlay,.trip-strip{position:absolute;z-index:2;left:22px;right:22px;display:flex;justify-content:space-between}.map-overlay{top:22px}.pill,.controls{background:#ffffffe8;border-radius:12px;padding:13px 15px;box-shadow:0 8px 20px #2c4d351a}.pill strong{display:block;font-size:14px;margin:6px 0}.pill span{font-size:11px;color:var(--muted)}.controls{padding:5px}.controls button{border:0;background:none;width:30px;height:28px;font-weight:bold}.trip-strip{bottom:20px;align-items:end}.metrics{display:flex;gap:8px}.metric{background:#14201deb;color:white;padding:11px 13px;border-radius:10px;min-width:85px}.metric b{display:block;color:var(--lime);font-size:18px}.metric span{font-size:10px;color:#b9c4bb}.tip{background:var(--lime);padding:12px;border-radius:10px;font-size:11px;font-weight:bold}.score{padding:26px;display:grid;grid-template-columns:1fr 150px;align-items:center;min-height:220px}.score-number{font-size:74px;color:var(--orange);font-weight:bold;letter-spacing:-5px;margin:10px 0}.score-caption{font-size:13px;font-weight:bold}.score-caption span{color:var(--teal)}.ring{--score:82%;width:140px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--orange) var(--score),#f1e3dc 0);position:relative}.ring:after{content:'';position:absolute;inset:12px;border-radius:50%;background:#fff}.ring-copy{position:relative;z-index:1;text-align:center}.ring-copy b{display:block;font-size:25px}.ring-copy span{font-size:10px;color:var(--muted)}.trip{padding:24px}.trip h2{margin-top:7px}.fields{display:grid;grid-template-columns:1fr 145px;gap:10px;margin-top:18px}.field label{display:block;color:var(--muted);font-size:10px;font-weight:bold;margin-bottom:7px;text-transform:uppercase}.field input{width:100%;padding:12px;border:1px solid #e3e7de;border-radius:9px}.start{width:100%;margin-top:14px;border:0;border-radius:9px;padding:14px;background:var(--orange);color:#fff;font-weight:bold}.start.active{background:var(--ink)}.head{display:flex;justify-content:space-between;padding:23px}.head a{color:var(--orange);font-size:11px;font-weight:bold}.challenge{padding:0 23px 23px}.challenge-box{background:var(--ink);color:#fff;border-radius:13px;padding:18px}.challenge-box p{font-size:12px;color:#acbab0;margin-top:7px}.progress{display:flex;gap:5px;margin:16px 0 8px}.progress i{height:6px;flex:1;background:#3a4942;border-radius:5px}.progress i.done{background:var(--lime)}.foot{color:var(--lime);font-size:11px;font-weight:bold}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 23px 23px}.stat{border-top:1px solid #e3e7de;padding-top:14px}.stat b{display:block;font-size:22px}.stat span{display:block;font-size:10px;color:var(--muted);margin-top:5px}.toast{position:fixed;right:24px;bottom:24px;background:var(--ink);color:#fff;padding:14px;border-radius:9px;opacity:0;transition:.3s;font-size:12px}.toast.show{opacity:1}@media(max-width:800px){.app{padding:18px}.layout{grid-template-columns:1fr}.intro{display:block}.status{margin-top:20px}.right{grid-template-columns:1fr 1fr}}@media(max-width:550px){nav button:not(.active),.tag{display:none}.right{grid-template-columns:1fr}.map{min-height:410px}.metrics{gap:3px}.metric{min-width:0;padding:8px}.metric b{font-size:14px}.score{grid-template-columns:1fr 120px;padding:19px}.ring{width:115px}.fields{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="app">
+<header class="top"><div class="brand"><div class="mark">V</div><div><div class="name">verdant</div><div class="tag">your lighter driving habit</div></div></div><nav><button class="active">Overview</button><button>Challenges</button><button>Community</button><div class="avatar">JD</div></nav></header>
+<section class="intro"><div><div class="eyebrow">Tuesday, September 11</div><h1>Good morning, Jordan.</h1><p>Small choices add up. Make your next mile count.</p></div><div class="status" id="status"><i class="dot"></i><span>Ready for a new drive</span></div></section>
+<section class="layout"><div class="stack"><article class="card map"><svg viewBox="0 0 800 450" preserveAspectRatio="none"><path d="M0 80C120 20 170 150 280 90S440 25 540 90s150 65 260-15V0H0Z" fill="#bed9c4"/><path d="M0 360c100-60 150 60 260 0s180-70 280-10 150 80 260-20v120H0Z" fill="#c4ddc2"/><path d="M-30 290c130-70 180 40 300-25s160-110 260-10 140 90 300-50" fill="none" stroke="#f5f3df" stroke-width="48"/><path d="M-30 290c130-70 180 40 300-25s160-110 260-10 140 90 300-50" fill="none" stroke="#ff7046" stroke-width="6"/><path d="M50 0 220 450M340 0l130 450M590 0 520 450M730 0 615 450M0 160l800 80M0 410l800-280" stroke="#9fc6a9" opacity=".55"/><circle cx="270" cy="265" r="9" fill="#fff" stroke="#ff7046" stroke-width="5"/><circle cx="530" cy="255" r="9" fill="#fff" stroke="#14201d" stroke-width="5"/></svg><div class="map-overlay"><div class="pill"><div class="eyebrow">Eco route selected</div><strong>Home to Downtown station</strong><span>Lowest-impact route available</span></div><div class="controls"><button>+</button><button>-</button><button>⌾</button></div></div><div class="trip-strip"><div class="metrics"><div class="metric"><b>12.4 mi</b><span>distance</span></div><div class="metric"><b>28 min</b><span>estimated</span></div><div class="metric"><b>−0.8 kg</b><span>CO2 saved</span></div></div><div class="tip">+18 XP route bonus</div></div></article><article class="card score"><div><div class="eyebrow">Today's eco score</div><div class="score-number" id="score">82</div><div class="score-caption">Excellent momentum <span>+6 this week</span></div></div><div class="ring"><div class="ring-copy"><b id="ring-score">82</b><span>out of 100</span></div></div></article></div>
+<div class="stack right"><article class="card trip"><div class="eyebrow">Plan a lighter trip</div><h2>Where are we going?</h2><div class="fields"><div class="field"><label>Destination</label><input value="Downtown station"></div><div class="field"><label>Mode</label><input value="Eco route"></div></div><button class="start" id="start">Start drive <span>-></span></button></article><article class="card"><div class="head"><div><div class="eyebrow">Your next unlock</div><h2>Active challenge</h2></div><a href="#">View all</a></div><div class="challenge"><div class="challenge-box"><h3>The smooth operator</h3><p>Keep acceleration gentle for 3 more miles.</p><div class="progress"><i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i></div><div class="foot">2.4 / 5.0 miles</div></div></div></article><article class="card"><div class="head"><div><div class="eyebrow">Your impact</div><h2>This week</h2></div><a href="#">Details</a></div><div class="stats"><div class="stat"><b>32.8</b><span>miles driven</span></div><div class="stat"><b>4.6</b><span>kg CO2 avoided</span></div><div class="stat"><b>680</b><span>XP collected</span></div></div></article></div></section>
+</main><div class="toast" id="toast"></div><script>const b=document.querySelector('#start'),s=document.querySelector('#status'),t=document.querySelector('#toast');let on=false;b.onclick=()=>{on=!on;b.classList.toggle('active',on);b.innerHTML=on?'End drive <span>-></span>':'Start drive <span>-></span>';s.querySelector('span').textContent=on?'Drive in progress':'Ready for a new drive';s.classList.toggle('live',on);document.querySelector('#score').textContent=on?'83':'82';document.querySelector('#ring-score').textContent=on?'83':'82';document.querySelector('.ring').style.setProperty('--score',on?'83%':'82%');t.textContent=on?'Drive started. Stay smooth out there.':'Drive complete. +18 XP added.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)};document.querySelectorAll('nav button').forEach(x=>x.onclick=()=>{document.querySelector('nav .active').classList.remove('active');x.classList.add('active')});</script>
+<script>
+	document.querySelector('.eyebrow').textContent = 'Onam season | Kerala';
+	document.querySelector('h1').textContent = 'Good morning, Jordan.';
+	document.querySelector('.intro p').textContent = 'From backwaters to the Western Ghats, make every mile lighter.';
+	document.querySelector('.pill strong').textContent = 'Kochi to Munnar';
+	document.querySelector('.pill span').textContent = 'Lowest-impact route through Kerala';
+	document.querySelector('.tip').textContent = '+18 XP green route bonus';
+	document.querySelector('.trip .eyebrow').textContent = 'Plan a Kerala trip';
+	document.querySelector('.trip h2').textContent = 'Where are we going?';
+	document.querySelector('.field input').value = 'Munnar, Kerala';
+	document.querySelectorAll('.field input')[1].value = 'Backwater-friendly';
+	document.querySelector('.challenge-box h3').textContent = 'The monsoon smooth operator';
+	document.querySelector('.challenge-box p').textContent = 'Keep acceleration gentle on 3 more hill miles.';
+	document.querySelector('.stat span').textContent = 'km of Kerala driven';
+	document.querySelectorAll('.stat span')[1].textContent = 'kg CO2 avoided';
+	document.querySelectorAll('.stat span')[2].textContent = 'XP collected';
+	document.querySelector('.map').style.background = '#b7dcd6';
+</script>
+<style>
+	.leaflet-map{position:absolute;inset:0;z-index:2}
+	.map:after{z-index:1;opacity:.16}
+	.map-overlay,.trip-strip{z-index:3}
+	.leaflet-control-attribution{font-size:9px}
+	.leaflet-routing-line{filter:drop-shadow(0 2px 2px rgba(20,32,29,.35))}
+	.live-location-button{border:0;background:#14201d;color:#fff;border-radius:10px;padding:11px 13px;font-size:11px;font-weight:700;box-shadow:0 8px 20px rgba(20,32,29,.2);white-space:nowrap}
+	.live-location-button:hover{background:#2778ff}
+	.live-pulse{display:inline-block;width:8px;height:8px;margin-right:5px;border-radius:50%;background:#2778ff;box-shadow:0 0 0 4px rgba(39,120,255,.2);vertical-align:middle}
+	.route-recommendation{position:absolute;z-index:4;left:22px;bottom:104px;width:245px;background:rgba(255,255,255,.94);border:1px solid #fff;border-radius:12px;padding:13px;box-shadow:0 8px 20px rgba(44,77,53,.16);backdrop-filter:blur(10px)}.route-recommendation strong{display:block;font-size:12px}.route-recommendation p{color:#76817b;font-size:10px;line-height:1.4;margin-top:4px}.route-recommendation button{margin-top:9px;border:0;border-radius:7px;background:#14201d;color:#fff;padding:8px 10px;font-size:10px;font-weight:700}.route-recommendation button.active{background:#43b99a;color:#14201d}.route-status{display:flex;gap:5px;margin-top:8px}.route-status i{width:7px;height:7px;border-radius:50%;display:block}.route-status i:first-child{background:#43b99a}.route-status i:last-child{background:#ff7046}.drive-focus{box-shadow:0 0 0 3px #ff7046,0 18px 46px rgba(26,47,35,.08)}
+	.onboarding{position:fixed;inset:0;z-index:40;display:grid;place-items:center;padding:22px;background:linear-gradient(135deg,#14201d 0%,#24463a 60%,#d8ead0 160%);overflow:auto}.onboarding.hidden{display:none}.onboarding-card{width:min(570px,100%);background:#f4f3ed;border-radius:22px;padding:31px;box-shadow:0 25px 90px rgba(0,0,0,.25)}.onboarding-brand{display:flex;align-items:center;gap:10px;color:#14201d;font-weight:700;font-size:18px}.onboarding-brand span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#b8e86a}.onboarding h1{font-size:34px;letter-spacing:-1.5px;margin:25px 0 8px}.onboarding-copy{color:#76817b;font-size:13px;line-height:1.5}.onboarding-form{display:grid;gap:13px;margin-top:23px}.onboarding-form label{color:#14201d;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}.onboarding-form input,.onboarding-form select{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #e3e7de;border-radius:9px;background:#fff;color:#14201d;outline:0}.onboarding-form input:focus,.onboarding-form select:focus{border-color:#43b99a}.onboarding-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consent{display:flex!important;gap:9px;align-items:start;text-transform:none!important;letter-spacing:0!important;color:#76817b!important;font-weight:400!important;line-height:1.4}.consent input{width:16px;margin:1px 0 0;accent-color:#43b99a}.onboarding-submit{border:0;border-radius:9px;padding:14px;background:#ff7046;color:#fff;font-size:12px;font-weight:700}.onboarding-demo{border:0;background:transparent;color:#76817b;font-size:11px;padding:4px}.onboarding-error{min-height:14px;color:#c34d2f;font-size:11px}.onboarding-note{color:#76817b;font-size:10px;line-height:1.4}@media(max-width:560px){.onboarding-card{padding:23px}.onboarding h1{font-size:29px}.onboarding-grid{grid-template-columns:1fr}}
+	.utility-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.utility-button{border:1px solid #e3e7de;background:#fff;color:#14201d;border-radius:8px;padding:8px 10px;font-size:10px;font-weight:700}.utility-button:hover{border-color:#43b99a}.privacy-note{display:flex;gap:8px;align-items:start;margin-top:14px;color:#76817b;font-size:10px;line-height:1.4}.privacy-note strong{color:#14201d}.safety-note{margin-top:14px;padding:10px 11px;border-radius:9px;background:#fff7dc;color:#72551c;font-size:10px;line-height:1.4}.map-error{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);display:none;background:#14201d;color:#fff;border-radius:10px;padding:12px;font-size:11px;text-align:center}.map-error.show{display:block}.settings-panel{position:fixed;inset:0;z-index:21;display:grid;place-items:center;padding:24px;background:rgba(20,32,29,.45);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}.settings-panel.open{opacity:1;pointer-events:auto}.settings-card{width:min(390px,100%);background:#f4f3ed;border-radius:18px;padding:24px;box-shadow:0 24px 80px rgba(20,32,29,.25)}.settings-card h2{margin:7px 0}.settings-card p{color:#76817b;font-size:12px;line-height:1.5}.settings-card label{display:block;margin-top:18px;color:#14201d;font-size:11px;font-weight:700}.settings-card select{width:100%;margin-top:7px;padding:10px;border:1px solid #e3e7de;border-radius:8px;background:#fff}.settings-close{float:right;border:0;background:#fff;border-radius:50%;width:30px;height:30px;font-size:18px}
+	.challenge-modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:24px;background:rgba(20,32,29,.48);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}.challenge-modal.open{opacity:1;pointer-events:auto}.challenge-panel{width:min(680px,100%);max-height:90vh;overflow:auto;background:#f4f3ed;border:1px solid #fff;border-radius:20px;box-shadow:0 24px 80px rgba(20,32,29,.25);padding:26px}.challenge-panel-head{display:flex;align-items:start;justify-content:space-between;margin-bottom:22px}.challenge-panel-head p{color:#76817b;font-size:13px;margin-top:7px}.challenge-close{width:34px;height:34px;border:0;border-radius:50%;background:#fff;color:#14201d;font-size:20px}.challenge-list{display:grid;gap:10px}.mission{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:13px;padding:15px;background:#fff;border:1px solid #e3e7de;border-radius:13px}.mission-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:11px;background:#e9f8c8;color:#14201d;font-weight:700;font-size:18px}.mission:nth-child(2) .mission-icon{background:#d9f2e8}.mission:nth-child(3) .mission-icon{background:#ffe2d8}.mission h3{font-size:14px}.mission p{color:#76817b;font-size:11px;margin-top:4px}.mission-progress{height:5px;margin-top:9px;background:#e7ebe3;border-radius:5px;overflow:hidden}.mission-progress i{display:block;height:100%;background:#ff7046;border-radius:5px}.mission-reward{color:#ff7046;font-size:11px;font-weight:700;text-align:right;white-space:nowrap}.mission-reward button{display:block;margin-top:8px;border:0;border-radius:7px;padding:7px 9px;background:#14201d;color:#fff;font-size:10px;font-weight:700}.mission-reward button:disabled{background:#dfe5dc;color:#76817b}.challenge-nav-active{color:#14201d!important;font-weight:700!important;border-bottom:2px solid #ff7046}
+</style>
+<div class="challenge-modal" id="challenge-modal" role="dialog" aria-modal="true" aria-labelledby="challenge-title">
+	<section class="challenge-panel">
+		<div class="challenge-panel-head"><div><div class="eyebrow">Kerala eco missions</div><h2 id="challenge-title">Build your greener streak</h2><p>Complete small driving goals across Kerala and turn them into XP.</p></div><button class="challenge-close" id="challenge-close" aria-label="Close challenges">&times;</button></div>
+		<div class="challenge-list">
+			<article class="mission"><div class="mission-icon">S</div><div><h3>The smooth operator</h3><p>Keep acceleration gentle for 3 more hill miles.</p><div class="mission-progress"><i style="width:48%"></i></div></div><div class="mission-reward">+80 XP<button disabled>In progress</button></div></article>
+			<article class="mission"><div class="mission-icon">M</div><div><h3>Monsoon miles</h3><p>Complete a safe 25 km drive while rain mode is active.</p><div class="mission-progress"><i style="width:76%"></i></div></div><div class="mission-reward">+120 XP<button class="claim-reward">Claim reward</button></div></article>
+			<article class="mission"><div class="mission-icon">K</div><div><h3>Keep Kerala green</h3><p>Choose the lowest-impact route 5 times this week.</p><div class="mission-progress"><i style="width:100%"></i></div></div><div class="mission-reward">+200 XP<button class="claim-reward">Claim reward</button></div></article>
+		</div>
+	</section>
+</div>
+<script>
+	const leafletCss = document.createElement('link');
+	leafletCss.rel = 'stylesheet';
+	leafletCss.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+	document.head.appendChild(leafletCss);
+	const leafletScript = document.createElement('script');
+	leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+	leafletScript.onload = () => {
+		const oldMapArt = document.querySelector('.map svg');
+		oldMapArt.style.display = 'none';
+		const mapElement = document.createElement('div');
+		mapElement.className = 'leaflet-map';
+		document.querySelector('.map').prepend(mapElement);
+
+		const keralaMap = L.map(mapElement, { zoomControl: false, scrollWheelZoom: false });
+		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri | Kerala route prototype',
+			maxZoom: 18
+		}).addTo(keralaMap);
+		L.control.zoom({ position: 'topright' }).addTo(keralaMap);
+
+		const route = [
+			[9.9312, 76.2673],
+			[10.0165, 76.3040],
+			[10.0647, 76.6350],
+			[10.0889, 77.0595]
+		];
+		const routeLine = L.polyline(route, { color: '#ff7046', weight: 6, opacity: .96, className: 'leaflet-routing-line' }).addTo(keralaMap);
+		L.circleMarker(route[0], { radius: 8, color: '#ff7046', weight: 4, fillColor: '#fff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Kochi', { permanent: false });
+		L.circleMarker(route[route.length - 1], { radius: 8, color: '#14201d', weight: 4, fillColor: '#fff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Munnar', { permanent: false });
+		keralaMap.fitBounds(routeLine.getBounds(), { padding: [70, 70] });
+
+		const destination = route[route.length - 1];
+		const destinationMarker = L.marker(destination).addTo(keralaMap).bindTooltip('Munnar destination', { permanent: false });
+		let liveLocation = route[0];
+		let locationMarker = L.circleMarker(liveLocation, { radius: 9, color: '#fff', weight: 4, fillColor: '#2778ff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Preview location: Kochi', { permanent: false });
+		window.verdantClearLocation = () => { locationMarker.setStyle({ opacity: 0, fillOpacity: 0 }); };
+		let previewLine = L.polyline([liveLocation, ...route.slice(1)], { color: '#ff7046', weight: 6, opacity: .96 }).addTo(keralaMap);
+		routeLine.setStyle({ opacity: 0 });
+		const fastestRoute = L.polyline([liveLocation, [10.0165, 76.3040], [10.0647, 76.6350], destination], { color: '#ff7046', weight: 4, opacity: .35, dashArray: '7 8' }).addTo(keralaMap);
+		const comfortRoute = L.polyline([liveLocation, [9.9850, 76.3650], [10.0200, 76.5200], [10.0700, 76.8000], destination], { color: '#43b99a', weight: 7, opacity: .95 }).addTo(keralaMap);
+		const ecoRoute = L.polyline([liveLocation, [9.9900, 76.4200], [10.0400, 76.7000], destination], { color: '#b8e86a', weight: 4, opacity: .75, dashArray: '3 7' }).addTo(keralaMap);
+		previewLine.setStyle({ opacity: 0 });
+		const routeRecommendation = document.createElement('div');
+		routeRecommendation.className = 'route-recommendation';
+		routeRecommendation.innerHTML = '<strong>Best balance: Comfort route</strong><p>Smoother hill sections with only 11 min added. Recommended for a calmer drive.</p><div class="route-status"><i></i><i></i></div><button class="active">Highlight comfort route</button>';
+		document.querySelector('.map').appendChild(routeRecommendation);
+		const highlightRoute = (routeName) => {
+			fastestRoute.setStyle({ opacity: routeName === 'fastest' ? .95 : .22, weight: routeName === 'fastest' ? 7 : 4 });
+			comfortRoute.setStyle({ opacity: routeName === 'comfort' ? .98 : .22, weight: routeName === 'comfort' ? 8 : 4 });
+			ecoRoute.setStyle({ opacity: routeName === 'eco' ? .95 : .22, weight: routeName === 'eco' ? 7 : 4 });
+			routeRecommendation.querySelector('button').textContent = `${routeName[0].toUpperCase() + routeName.slice(1)} route highlighted`;
+		};
+		routeRecommendation.querySelector('button').addEventListener('click', () => highlightRoute('comfort'));
+		highlightRoute('comfort');
+		window.verdantFocusRoute = () => { keralaMap.fitBounds(comfortRoute.getBounds(), { padding: [90, 90], maxZoom: 11 }); highlightRoute('comfort'); };
+
+		const distanceKm = (a, b) => {
+			const earthRadius = 6371;
+			const lat = (b[0] - a[0]) * Math.PI / 180;
+			const lon = (b[1] - a[1]) * Math.PI / 180;
+			const value = Math.sin(lat / 2) ** 2 + Math.cos(a[0] * Math.PI / 180) * Math.cos(b[0] * Math.PI / 180) * Math.sin(lon / 2) ** 2;
+			return earthRadius * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+		};
+		const updatePreview = (position, label) => {
+			liveLocation = position;
+			locationMarker.setLatLng(position).setTooltipContent('Live location: ' + label);
+			previewLine.setLatLngs([position, ...route.slice(1)]);
+			const kilometers = distanceKm(position, destination) * 1.12;
+			const minutes = Math.round((kilometers / 38) * 60);
+			const hours = Math.floor(minutes / 60);
+			const remaining = minutes % 60;
+			const eta = hours ? `${hours} hr ${remaining} min` : `${minutes} min`;
+			document.querySelector('.metric b').textContent = `${Math.round(kilometers)} km`;
+			document.querySelectorAll('.metric b')[1].textContent = eta;
+			document.querySelectorAll('.metric span')[0].textContent = 'route distance';
+			document.querySelectorAll('.metric span')[1].textContent = 'live ETA';
+			keralaMap.fitBounds(previewLine.getBounds(), { padding: [70, 70] });
+		};
+		const locationButton = document.createElement('button');
+		locationButton.className = 'live-location-button';
+		locationButton.innerHTML = '<span class="live-pulse"></span> Use live location';
+		locationButton.title = 'Preview the route from your current location';
+		document.querySelector('.map-overlay').appendChild(locationButton);
+		const showToast = (message) => {
+			const toast = document.querySelector('#toast');
+			toast.textContent = message;
+			toast.classList.add('show');
+			setTimeout(() => toast.classList.remove('show'), 2800);
+		};
+		locationButton.addEventListener('click', () => {
+			if (!navigator.geolocation) {
+				showToast('Live location is not available here. Showing Kochi preview.');
+				return;
+			}
+			locationButton.innerHTML = '<span class="live-pulse"></span> Finding you...';
+			navigator.geolocation.getCurrentPosition((current) => {
+				updatePreview([current.coords.latitude, current.coords.longitude], 'you are here');
+				locationButton.innerHTML = '<span class="live-pulse"></span> Live location on';
+				showToast('Route preview updated from your live location.');
+			}, () => {
+				updatePreview(route[0], 'Kochi preview');
+				locationButton.innerHTML = '<span class="live-pulse"></span> Kochi preview';
+				showToast('Location permission was unavailable, so Kochi is used as the preview start.');
+			}, { enableHighAccuracy: true, timeout: 8000 });
+		});
+		updatePreview(route[0], 'Kochi preview');
+	};
+	document.body.appendChild(leafletScript);
+</script>
+<script>
+	const challengeModal = document.querySelector('#challenge-modal');
+	const challengeClose = document.querySelector('#challenge-close');
+	const challengeNav = document.querySelectorAll('nav button')[1];
+	const challengeLinks = document.querySelectorAll('.head a');
+	const openChallenges = (event) => {
+		if (event) event.preventDefault();
+		challengeModal.classList.add('open');
+		challengeNav.classList.add('challenge-nav-active');
+	};
+	challengeNav.addEventListener('click', openChallenges);
+	challengeLinks[0].addEventListener('click', openChallenges);
+	challengeClose.addEventListener('click', () => {
+		challengeModal.classList.remove('open');
+		challengeNav.classList.remove('challenge-nav-active');
+	});
+	challengeModal.addEventListener('click', (event) => {
+		if (event.target === challengeModal) challengeClose.click();
+	});
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape') challengeClose.click();
+	});
+	document.querySelectorAll('.claim-reward').forEach((button) => button.addEventListener('click', () => {
+		button.textContent = 'Claimed + XP';
+		button.disabled = true;
+		button.closest('.mission-reward').style.color = '#43b99a';
+		const toast = document.querySelector('#toast');
+		toast.textContent = 'Reward claimed. Your Kerala eco streak is growing.';
+		toast.classList.add('show');
+		setTimeout(() => toast.classList.remove('show'), 2800);
+	}));
+</script>
+<script>
+	const savedScore = Number(localStorage.getItem('verdant-score'));
+	if (savedScore) {
+		document.querySelector('#score').textContent = savedScore;
+		document.querySelector('#ring-score').textContent = savedScore;
+		document.querySelector('.ring').style.setProperty('--score', `${savedScore}%`);
+	}
+	const tripCard = document.querySelector('.trip');
+	tripCard.insertAdjacentHTML('beforeend', '<div class="utility-row"><button class="utility-button" id="route-options">Route options</button><button class="utility-button" id="privacy-button">Location privacy</button></div><div class="privacy-note" id="privacy-note"><span>●</span><span><strong>Location is off.</strong> Use live location only when you choose it. Nothing is saved by this prototype.</span></div><div class="safety-note"><strong>Safety first:</strong> set your route before driving. Verdant never asks you to interact with the screen while moving.</div>');
+	const routeOptions = document.querySelector('#route-options');
+	routeOptions.addEventListener('click', () => {
+		const destination = document.querySelectorAll('.field input')[0];
+		const routes = ['Munnar, Kerala', 'Alappuzha, Kerala', 'Varkala, Kerala'];
+		const current = routes.indexOf(destination.value);
+		destination.value = routes[(current + 1) % routes.length];
+		document.querySelector('.pill strong').textContent = destination.value === 'Munnar, Kerala' ? 'Kochi to Munnar' : `Kochi to ${destination.value.split(',')[0]}`;
+		document.querySelector('.pill span').textContent = 'Preview route selected';
+	});
+	const settingsPanel = document.createElement('div');
+	settingsPanel.className = 'settings-panel';
+	settingsPanel.innerHTML = '<section class="settings-card" role="dialog" aria-modal="true"><button class="settings-close" aria-label="Close settings">&times;</button><div class="eyebrow">Your controls</div><h2>Privacy and units</h2><p>Choose how Verdant presents your trip. Location preview stays local to this browser prototype.</p><label for="unit-choice">Distance units</label><select id="unit-choice"><option value="km">Kilometres (km)</option><option value="mi">Miles (mi)</option></select><label for="language-choice">Language</label><select id="language-choice"><option>English</option><option>Malayalam (coming next)</option></select></section>';
+	document.body.appendChild(settingsPanel);
+	const unitChoice = settingsPanel.querySelector('#unit-choice');
+	unitChoice.value = localStorage.getItem('verdant-units') || 'km';
+	unitChoice.addEventListener('change', () => {
+		localStorage.setItem('verdant-units', unitChoice.value);
+		const metric = document.querySelector('.metric b');
+		const currentKm = Number.parseFloat(metric.textContent);
+		if (Number.isFinite(currentKm)) {
+			metric.textContent = unitChoice.value === 'mi' ? `${(currentKm * 0.621371).toFixed(1)} mi` : `${Math.round(currentKm)} km`;
+		}
+	});
+	settingsPanel.querySelector('.settings-close').addEventListener('click', () => settingsPanel.classList.remove('open'));
+	settingsPanel.addEventListener('click', (event) => { if (event.target === settingsPanel) settingsPanel.classList.remove('open'); });
+	document.querySelector('#privacy-button').addEventListener('click', () => settingsPanel.classList.add('open'));
+	document.querySelector('#privacy-note').addEventListener('click', () => {
+		if (window.verdantClearLocation) window.verdantClearLocation();
+		document.querySelector('#privacy-note').innerHTML = '<span>●</span><span><strong>Location cleared.</strong> Your visible location marker has been removed.</span>';
+		if (window.showToast) window.showToast('Location preview cleared from the map.');
+	});
+	document.querySelector('#start').addEventListener('click', () => {
+		const currentScore = Number(document.querySelector('#score').textContent);
+		localStorage.setItem('verdant-score', currentScore);
+	});
+	document.querySelector('#start').addEventListener('click', () => {
+		const driveIsActive = document.querySelector('#start').classList.contains('active');
+		document.querySelector('.map').classList.toggle('drive-focus', driveIsActive);
+		if (driveIsActive && window.verdantFocusRoute) window.verdantFocusRoute();
+	});
+	document.querySelectorAll('.claim-reward').forEach((button, index) => {
+		if (localStorage.getItem(`verdant-reward-${index}`) === 'claimed') {
+			button.textContent = 'Claimed + XP';
+			button.disabled = true;
+		}
+		button.addEventListener('click', () => localStorage.setItem(`verdant-reward-${index}`, 'claimed'));
+	});
+	window.addEventListener('error', (event) => {
+		if (event.message && event.message.toLowerCase().includes('leaflet')) {
+			const error = document.querySelector('.map-error');
+			if (error) error.classList.add('show');
+		}
+	});
+</script>
+<section class="onboarding" id="onboarding" aria-labelledby="onboarding-title">
+	<div class="onboarding-card">
+		<div class="onboarding-brand"><span>V</span> verdant</div>
+		<h1 id="onboarding-title">Let’s make your drives lighter.</h1>
+		<p class="onboarding-copy">A quick setup helps us tailor routes, challenges, and your eco score to the way you drive in Kerala.</p>
+		<form class="onboarding-form" id="onboarding-form">
+			<div class="onboarding-grid"><label>First name<input id="profile-name" name="name" autocomplete="given-name" placeholder="e.g. Ananya" required></label><label>Phone number<input id="profile-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit number" required></label></div>
+			<div class="onboarding-grid"><label>Vehicle type<select id="profile-vehicle" required><option value="">Choose your vehicle</option><option>Electric car</option><option>Petrol car</option><option>Diesel car</option><option>Motorbike / scooter</option><option>Public transport</option></select></label><label>Main goal<select id="profile-goal" required><option value="">Choose a goal</option><option>Save fuel and money</option><option>Reduce carbon emissions</option><option>Drive more smoothly</option><option>Explore Kerala sustainably</option></select></label></div>
+			<label class="consent"><input id="profile-consent" type="checkbox" required><span>I understand that this prototype stores my profile only in this browser and asks for location only when I choose live preview.</span></label>
+			<div class="onboarding-error" id="onboarding-error" role="alert"></div>
+			<button class="onboarding-submit" type="submit">Create my eco profile <span>-></span></button>
+			<button class="onboarding-demo" id="onboarding-demo" type="button">Preview the dashboard without saving personal info</button>
+			<p class="onboarding-note">Your phone number is used only for this local demo and is never sent anywhere.</p>
+		</form>
+	</div>
+</section>
+<script>
+	const onboarding = document.querySelector('#onboarding');
+	const onboardingForm = document.querySelector('#onboarding-form');
+	const profileError = document.querySelector('#onboarding-error');
+	const savedProfile = JSON.parse(localStorage.getItem('verdant-profile') || 'null');
+	const showDashboard = (profile) => {
+		onboarding.classList.add('hidden');
+		if (profile && profile.name) {
+			document.querySelector('h1').textContent = `Good morning, ${profile.name}.`;
+			document.querySelector('.avatar').textContent = profile.name.slice(0, 2).toUpperCase();
+			document.querySelector('.intro p').textContent = `${profile.goal}. Make your next Kerala mile count.`;
+		}
+	};
+	if (savedProfile) showDashboard(savedProfile);
+	onboardingForm.addEventListener('submit', (event) => {
+		event.preventDefault();
+		const phone = document.querySelector('#profile-phone').value.replace(/\D/g, '');
+		if (phone.length !== 10) {
+			profileError.textContent = 'Please enter a valid 10-digit phone number.';
+			return;
+		}
+		const profile = { name: document.querySelector('#profile-name').value.trim(), phone, vehicle: document.querySelector('#profile-vehicle').value, goal: document.querySelector('#profile-goal').value };
+		localStorage.setItem('verdant-profile', JSON.stringify(profile));
+		showDashboard(profile);
+	});
+	document.querySelector('#onboarding-demo').addEventListener('click', () => showDashboard(null));
+</script>
+</body>
+</html>
