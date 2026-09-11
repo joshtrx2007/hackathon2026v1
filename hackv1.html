@@ -7,25 +7,49 @@
 <style>
 :root{--ink:#14201d;--paper:#f4f3ed;--card:#fff;--muted:#76817b;--lime:#b8e86a;--orange:#ff7046;--teal:#43b99a}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif}.app{max-width:1300px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:50px}.brand{display:flex;gap:12px;align-items:center}.mark,.avatar{display:grid;place-items:center;border-radius:50%;font-weight:bold}.mark{width:36px;height:36px;background:var(--ink);color:var(--lime)}.name{font-size:20px;font-weight:bold}.tag,.eyebrow,.muted{color:var(--muted);font-size:12px}.tag{margin-top:3px}nav{display:flex;gap:28px;align-items:center}nav button{border:0;background:none;color:var(--muted);padding:8px;font-size:13px}nav button.active{color:var(--ink);font-weight:bold;border-bottom:2px solid var(--orange)}.avatar{width:38px;height:38px;background:var(--lime);font-size:12px}.intro{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}h1{font-size:clamp(32px,5vw,58px);margin:10px 0 8px;letter-spacing:-3px}h2,h3,p{margin:0}.intro p{color:var(--muted)}.status{color:var(--teal);font-size:12px;font-weight:bold;text-transform:uppercase}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-right:8px}.layout{display:grid;grid-template-columns:1.6fr .9fr;gap:22px}.stack{display:grid;gap:22px;align-content:start}.card{background:var(--card);border:1px solid #e3e7de;border-radius:18px;box-shadow:0 18px 46px #1a2f2314}.map{min-height:450px;position:relative;overflow:hidden;background:#c6dfc8}.map svg{position:absolute;width:100%;height:100%}.map:after{content:'';position:absolute;inset:0;background:linear-gradient(145deg,#fff5,#7eba9730)}.map-overlay,.trip-strip{position:absolute;z-index:2;left:22px;right:22px;display:flex;justify-content:space-between}.map-overlay{top:22px}.pill,.controls{background:#ffffffe8;border-radius:12px;padding:13px 15px;box-shadow:0 8px 20px #2c4d351a}.pill strong{display:block;font-size:14px;margin:6px 0}.pill span{font-size:11px;color:var(--muted)}.controls{padding:5px}.controls button{border:0;background:none;width:30px;height:28px;font-weight:bold}.trip-strip{bottom:20px;align-items:end}.metrics{display:flex;gap:8px}.metric{background:#14201deb;color:white;padding:11px 13px;border-radius:10px;min-width:85px}.metric b{display:block;color:var(--lime);font-size:18px}.metric span{font-size:10px;color:#b9c4bb}.tip{background:var(--lime);padding:12px;border-radius:10px;font-size:11px;font-weight:bold}.score{padding:26px;display:grid;grid-template-columns:1fr 150px;align-items:center;min-height:220px}.score-number{font-size:74px;color:var(--orange);font-weight:bold;letter-spacing:-5px;margin:10px 0}.score-caption{font-size:13px;font-weight:bold}.score-caption span{color:var(--teal)}.ring{--score:82%;width:140px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--orange) var(--score),#f1e3dc 0);position:relative}.ring:after{content:'';position:absolute;inset:12px;border-radius:50%;background:#fff}.ring-copy{position:relative;z-index:1;text-align:center}.ring-copy b{display:block;font-size:25px}.ring-copy span{font-size:10px;color:var(--muted)}.trip{padding:24px}.trip h2{margin-top:7px}.fields{display:grid;grid-template-columns:1fr 145px;gap:10px;margin-top:18px}.field label{display:block;color:var(--muted);font-size:10px;font-weight:bold;margin-bottom:7px;text-transform:uppercase}.field input{width:100%;padding:12px;border:1px solid #e3e7de;border-radius:9px}.start{width:100%;margin-top:14px;border:0;border-radius:9px;padding:14px;background:var(--orange);color:#fff;font-weight:bold}.start.active{background:var(--ink)}.head{display:flex;justify-content:space-between;padding:23px}.head a{color:var(--orange);font-size:11px;font-weight:bold}.challenge{padding:0 23px 23px}.challenge-box{background:var(--ink);color:#fff;border-radius:13px;padding:18px}.challenge-box p{font-size:12px;color:#acbab0;margin-top:7px}.progress{display:flex;gap:5px;margin:16px 0 8px}.progress i{height:6px;flex:1;background:#3a4942;border-radius:5px}.progress i.done{background:var(--lime)}.foot{color:var(--lime);font-size:11px;font-weight:bold}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 23px 23px}.stat{border-top:1px solid #e3e7de;padding-top:14px}.stat b{display:block;font-size:22px}.stat span{display:block;font-size:10px;color:var(--muted);margin-top:5px}.toast{position:fixed;right:24px;bottom:24px;background:var(--ink);color:#fff;padding:14px;border-radius:9px;opacity:0;transition:.3s;font-size:12px}.toast.show{opacity:1}@media(max-width:800px){.app{padding:18px}.layout{grid-template-columns:1fr}.intro{display:block}.status{margin-top:20px}.right{grid-template-columns:1fr 1fr}}@media(max-width:550px){nav button:not(.active),.tag{display:none}.right{grid-template-columns:1fr}.map{min-height:410px}.metrics{gap:3px}.metric{min-width:0;padding:8px}.metric b{font-size:14px}.score{grid-template-columns:1fr 120px;padding:19px}.ring{width:115px}.fields{grid-template-columns:1fr}}
+	.card,.field input,.route-choice,.destination-option,.utility-button,.start,.live-location-button,.pill,.controls,.mission,.settings-card,.challenge-panel,.onboarding-card{transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s cubic-bezier(.2,.8,.2,1),border-color .22s ease,background-color .22s ease,opacity .22s ease,filter .22s ease}.card:hover{transform:translateY(-1px)}.route-choice:hover,.destination-option:hover,.utility-button:hover,.start:hover,.live-location-button:hover{transform:translateY(-1px)}
+	.destination-picker{position:relative}.destination-suggestions{position:absolute;left:0;right:0;top:calc(100% + 8px);display:none;z-index:20;max-height:220px;overflow:auto;padding:8px;background:rgba(255,255,255,.98);border:1px solid #e9eeea;border-radius:12px;box-shadow:0 18px 38px rgba(20,32,29,.12);opacity:0;transform:translateY(-4px);transition:opacity .18s ease,transform .18s ease;pointer-events:none}.destination-picker.active .destination-suggestions{display:grid;opacity:1;transform:translateY(0);pointer-events:auto}.destination-option{appearance:none;border:0;background:transparent;text-align:left;padding:10px 12px;border-radius:8px;color:var(--ink);font-size:12px;cursor:pointer}.destination-option:hover,.destination-option.active{background:#edf7f3}.destination-empty{padding:10px 12px;color:var(--muted);font-size:12px}
+</style>
+<style>
+	.community-panel{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:24px;background:rgba(20,32,29,.45);backdrop-filter:blur(10px);opacity:0;pointer-events:none;transition:opacity .25s ease}.community-panel.open{opacity:1;pointer-events:auto}.community-card{width:min(520px,100%);padding:32px;background:var(--card);border:1px solid #e3e7de;border-radius:20px;box-shadow:0 24px 80px rgba(20,32,29,.25);transform:translateY(8px);transition:transform .25s ease}.community-panel.open .community-card{transform:translateY(0)}.community-icon{display:grid;place-items:center;width:48px;height:48px;margin-bottom:20px;border-radius:14px;background:#e9f8c8;color:var(--ink);font-size:21px}.community-card h2{margin-bottom:8px;font-size:28px;letter-spacing:-1px}.community-card p{color:var(--muted);font-size:13px;line-height:1.55}.community-close{margin-top:22px;border:0;border-radius:9px;padding:11px 14px;background:var(--ink);color:var(--card);font-size:11px;font-weight:700;cursor:pointer;transition:transform .18s ease,opacity .18s ease}.community-close:hover{transform:translateY(-1px);opacity:.9}
 </style>
 </head>
 <body>
+<style>
+	.mark{width:40px;height:40px;background:var(--ink);color:var(--lime);box-shadow:0 8px 18px #14201d2b}
+	.mark svg{width:27px;height:27px;overflow:visible}
+	.mark .car{fill:none;stroke:var(--lime);stroke-linecap:round;stroke-linejoin:round;stroke-width:2.2}
+	.mark .leaf{fill:var(--teal);stroke:var(--paper);stroke-linejoin:round;stroke-width:1.2}
+	.controls{display:flex;gap:5px}.controls button{width:28px;height:28px;border:0;border-radius:8px;background:transparent;color:var(--ink);font-size:17px;cursor:pointer;transition:background-color .18s ease,transform .18s ease}.controls button:hover{background:var(--lime);transform:translateY(-1px)}.controls button:active{transform:translateY(0) scale(.94)}
+	.destination-picker{z-index:8}.destination-suggestions{background:#fff;color:#14201d;border-color:#dce5dd;box-shadow:0 18px 38px rgba(20,32,29,.2)}.destination-option{color:#14201d;line-height:1.35}.destination-option:hover,.destination-option.active{background:#e9f8c8;color:#14201d}.destination-empty{color:#596861;background:#fff}
+	.route-choice{background:var(--card);color:var(--ink);border-color:#dce5dd}.route-choice.active,.route-choice.active:hover{background:var(--ink);color:var(--card);border-color:var(--ink);box-shadow:0 6px 14px rgba(20,32,29,.18)}
+	.fuel-actions{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 10px;margin-top:12px;padding-top:12px;border-top:1px solid #e3e7de}.fuel-actions label{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}.fuel-actions input{width:100%;min-width:0;padding:9px 10px;border:1px solid #dce5dd;border-radius:8px;background:var(--card);color:var(--ink);font-size:12px}.fuel-actions span,.fuel-actions small{color:var(--muted);font-size:10px}.fuel-actions span{grid-column:1}.fuel-actions #obd-connect{grid-column:2;grid-row:1 / span 2;margin:0;white-space:nowrap}.fuel-actions small{grid-column:1 / -1}.fuel-actions input:focus{outline:3px solid rgba(67,185,154,.2);border-color:var(--teal)}
+	@media (prefers-color-scheme: dark){.destination-suggestions{background:#202e28;color:#eef5ed;border-color:#3a4d43;box-shadow:0 18px 38px rgba(0,0,0,.45)}.destination-option{color:#eef5ed}.destination-option:hover,.destination-option.active{background:#365143;color:#fff}.destination-empty{color:#a9b8ad;background:#202e28}}
+</style>
 <main class="app">
-<header class="top"><div class="brand"><div class="mark">V</div><div><div class="name">verdant</div><div class="tag">your lighter driving habit</div></div></div><nav><button class="active">Overview</button><button>Challenges</button><button>Community</button><div class="avatar">JD</div></nav></header>
+<header class="top"><div class="brand"><div class="mark" aria-label="Verdant eco drive"><svg viewBox="0 0 32 32" role="img" aria-hidden="true"><path class="car" d="M5 19h22v5H5zM8 19l2.6-6h10.8l2.6 6M9 24v2M23 24v2M8 19h16"/><circle cx="10" cy="24" r="1.7" fill="var(--lime)"/><circle cx="22" cy="24" r="1.7" fill="var(--lime)"/><path class="leaf" d="M22 5c5.5.2 7.3 3.2 6.8 7.1-3.7.5-6.3-.8-6.8-3.5-.3-1.6-.2-2.8 0-3.6Z"/><path d="M22.3 11.8c1.8-2.3 3.2-3.6 5-4.5" fill="none" stroke="var(--paper)" stroke-width="1" stroke-linecap="round"/></svg></div><div><div class="name">verdant</div><div class="tag">your lighter driving habit</div></div></div><nav><button class="active">Overview</button><button>Challenges</button><button>Community</button><div class="avatar">JD</div></nav></header>
 <section class="intro"><div><div class="eyebrow">Tuesday, September 11</div><h1>Good morning, Jordan.</h1><p>Small choices add up. Make your next mile count.</p></div><div class="status" id="status"><i class="dot"></i><span>Ready for a new drive</span></div></section>
-<section class="layout"><div class="stack"><article class="card map"><svg viewBox="0 0 800 450" preserveAspectRatio="none"><path d="M0 80C120 20 170 150 280 90S440 25 540 90s150 65 260-15V0H0Z" fill="#bed9c4"/><path d="M0 360c100-60 150 60 260 0s180-70 280-10 150 80 260-20v120H0Z" fill="#c4ddc2"/><path d="M-30 290c130-70 180 40 300-25s160-110 260-10 140 90 300-50" fill="none" stroke="#f5f3df" stroke-width="48"/><path d="M-30 290c130-70 180 40 300-25s160-110 260-10 140 90 300-50" fill="none" stroke="#ff7046" stroke-width="6"/><path d="M50 0 220 450M340 0l130 450M590 0 520 450M730 0 615 450M0 160l800 80M0 410l800-280" stroke="#9fc6a9" opacity=".55"/><circle cx="270" cy="265" r="9" fill="#fff" stroke="#ff7046" stroke-width="5"/><circle cx="530" cy="255" r="9" fill="#fff" stroke="#14201d" stroke-width="5"/></svg><div class="map-overlay"><div class="pill"><div class="eyebrow">Eco route selected</div><strong>Home to Downtown station</strong><span>Lowest-impact route available</span></div><div class="controls"><button>+</button><button>-</button><button>⌾</button></div></div><div class="trip-strip"><div class="metrics"><div class="metric"><b>12.4 mi</b><span>distance</span></div><div class="metric"><b>28 min</b><span>estimated</span></div><div class="metric"><b>−0.8 kg</b><span>CO2 saved</span></div></div><div class="tip">+18 XP route bonus</div></div></article><article class="card score"><div><div class="eyebrow">Today's eco score</div><div class="score-number" id="score">82</div><div class="score-caption">Excellent momentum <span>+6 this week</span></div></div><div class="ring"><div class="ring-copy"><b id="ring-score">82</b><span>out of 100</span></div></div></article></div>
-<div class="stack right"><article class="card trip"><div class="eyebrow">Plan a lighter trip</div><h2>Where are we going?</h2><div class="fields"><div class="field"><label>Destination</label><input value="Downtown station"></div><div class="field"><label>Mode</label><input value="Eco route"></div></div><button class="start" id="start">Start drive <span>-></span></button></article><article class="card"><div class="head"><div><div class="eyebrow">Your next unlock</div><h2>Active challenge</h2></div><a href="#">View all</a></div><div class="challenge"><div class="challenge-box"><h3>The smooth operator</h3><p>Keep acceleration gentle for 3 more miles.</p><div class="progress"><i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i></div><div class="foot">2.4 / 5.0 miles</div></div></div></article><article class="card"><div class="head"><div><div class="eyebrow">Your impact</div><h2>This week</h2></div><a href="#">Details</a></div><div class="stats"><div class="stat"><b>32.8</b><span>miles driven</span></div><div class="stat"><b>4.6</b><span>kg CO2 avoided</span></div><div class="stat"><b>680</b><span>XP collected</span></div></div></article></div></section>
-</main><div class="toast" id="toast"></div><script>const b=document.querySelector('#start'),s=document.querySelector('#status'),t=document.querySelector('#toast');let on=false;b.onclick=()=>{on=!on;b.classList.toggle('active',on);b.innerHTML=on?'End drive <span>-></span>':'Start drive <span>-></span>';s.querySelector('span').textContent=on?'Drive in progress':'Ready for a new drive';s.classList.toggle('live',on);document.querySelector('#score').textContent=on?'83':'82';document.querySelector('#ring-score').textContent=on?'83':'82';document.querySelector('.ring').style.setProperty('--score',on?'83%':'82%');t.textContent=on?'Drive started. Stay smooth out there.':'Drive complete. +18 XP added.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)};document.querySelectorAll('nav button').forEach(x=>x.onclick=()=>{document.querySelector('nav .active').classList.remove('active');x.classList.add('active')});</script>
+<section class="layout"><div class="stack"><article class="card map"><svg viewBox="0 0 800 450" preserveAspectRatio="none"><path d="M0 80C120 20 170 150 280 90S440 25 540 90s150 65 260-15V0H0Z" fill="#bed9c4"/><path d="M0 360c100-60 150 60 260 0s180-70 280-10 150 80 260-20v120H0Z" fill="#c4ddc2"/><path d="M-30 290c130-70 180 40 300-25s160-110 260-10 140 90 300-50" fill="none" stroke="#f5f3df" stroke-width="48"/><path d="M-30 290c130-70 180 40 300-25s160-110 260-10 140 90 300-50" fill="none" stroke="#ff7046" stroke-width="6"/><path d="M50 0 220 450M340 0l130 450M590 0 520 450M730 0 615 450M0 160l800 80M0 410l800-280" stroke="#9fc6a9" opacity=".55"/><circle cx="270" cy="265" r="9" fill="#fff" stroke="#ff7046" stroke-width="5"/><circle cx="530" cy="255" r="9" fill="#fff" stroke="#14201d" stroke-width="5"/></svg><div class="map-overlay"><div class="pill"><div class="eyebrow">Plan your Kerala route</div><strong>Choose a destination</strong><span>Search for a Kerala stop to preview the route</span></div><div class="controls"><button>+</button><button>-</button><button>⌾</button></div></div><div class="trip-strip"><div class="metrics"><div class="metric"><b>--</b><span>distance</span></div><div class="metric"><b>--</b><span>estimated</span></div><div class="metric"><b>--</b><span>CO2 from fuel</span></div></div><div class="tip">Choose a stop to see route details</div></div></article><article class="card score"><div><div class="eyebrow">Today's eco score</div><div class="score-number" id="score">82</div><div class="score-caption">Excellent momentum <span>+6 this week</span></div></div><div class="ring"><div class="ring-copy"><b id="ring-score">82</b><span>out of 100</span></div></div></article></div>
+<div class="stack right"><article class="card trip"><div class="eyebrow">Plan a lighter trip</div><h2>Where are we going?</h2><div class="fields"><div class="field destination-picker"><label>Destination</label><input id="destination-input" value="Munnar, Kerala" placeholder="Search Kerala destinations" autocomplete="off"><div class="destination-suggestions" id="destination-suggestions"></div></div><div class="field"><label>Mode</label><input value="Eco route"></div></div><button class="start" id="start">Start drive <span>-></span></button></article><article class="card"><div class="head"><div><div class="eyebrow">Your next unlock</div><h2>Active challenge</h2></div><a href="#">View all</a></div><div class="challenge"><div class="challenge-box"><h3>The smooth operator</h3><p>Keep acceleration gentle for 3 more miles.</p><div class="progress"><i class="done"></i><i class="done"></i><i class="done"></i><i></i><i></i></div><div class="foot">2.4 / 5.0 miles</div></div></div></article><article class="card"><div class="head"><div><div class="eyebrow">Your impact</div><h2>This week</h2></div><a href="#">Details</a></div><div class="stats"><div class="stat"><b>32.8</b><span>miles driven</span></div><div class="stat"><b>4.6</b><span>kg CO2 avoided</span></div><div class="stat"><b>680</b><span>XP collected</span></div></div></article></div></section>
+</main><section class="community-panel" id="community-panel" role="dialog" aria-modal="true" aria-labelledby="community-title"><div class="community-card"><div class="community-icon" aria-hidden="true">+</div><div class="eyebrow">Verdant community</div><h2 id="community-title">We are down right now</h2><p>There are not many users here yet, so the community page is taking a short break. Keep driving lighter and check back as more Kerala drivers join Verdant.</p><button class="community-close" id="community-close" type="button">Back to overview</button></div></section><div class="toast" id="toast"></div><script>const b=document.querySelector('#start'),s=document.querySelector('#status'),t=document.querySelector('#toast');let on=false;b.onclick=()=>{on=!on;b.classList.toggle('active',on);b.innerHTML=on?'End drive <span>-></span>':'Start drive <span>-></span>';s.querySelector('span').textContent=on?'Drive in progress':'Ready for a new drive';s.classList.toggle('live',on);document.querySelector('#score').textContent=on?'83':'82';document.querySelector('#ring-score').textContent=on?'83':'82';document.querySelector('.ring').style.setProperty('--score',on?'83%':'82%');t.textContent=on?'Drive started. Stay smooth out there.':'Drive complete. +18 XP added.';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)};document.querySelectorAll('nav button').forEach(x=>x.onclick=()=>{document.querySelector('nav .active').classList.remove('active');x.classList.add('active')});</script>
+<script>
+	const communityPanel = document.querySelector('#community-panel');
+	const communityButton = document.querySelectorAll('nav button')[2];
+	const communityClose = document.querySelector('#community-close');
+	communityButton.addEventListener('click', () => communityPanel.classList.add('open'));
+	communityClose.addEventListener('click', () => { communityPanel.classList.remove('open'); document.querySelector('nav .active').classList.remove('active'); document.querySelector('nav button').classList.add('active'); });
+	communityPanel.addEventListener('click', (event) => { if (event.target === communityPanel) communityClose.click(); });
+</script>
 <script>
 	document.querySelector('.eyebrow').textContent = 'Onam season | Kerala';
 	document.querySelector('h1').textContent = 'Good morning, Jordan.';
 	document.querySelector('.intro p').textContent = 'From backwaters to the Western Ghats, make every mile lighter.';
-	document.querySelector('.pill strong').textContent = 'Kochi to Munnar';
+	document.querySelector('.pill strong').textContent = 'Choose a destination';
 	document.querySelector('.pill span').textContent = 'Lowest-impact route through Kerala';
 	document.querySelector('.tip').textContent = '+18 XP green route bonus';
 	document.querySelector('.trip .eyebrow').textContent = 'Plan a Kerala trip';
 	document.querySelector('.trip h2').textContent = 'Where are we going?';
-	document.querySelector('.field input').value = 'Munnar, Kerala';
+	document.querySelector('#destination-input').value = '';
 	document.querySelectorAll('.field input')[1].value = 'Backwater-friendly';
 	document.querySelector('.challenge-box h3').textContent = 'The monsoon smooth operator';
 	document.querySelector('.challenge-box p').textContent = 'Keep acceleration gentle on 3 more hill miles.';
@@ -35,18 +59,18 @@
 	document.querySelector('.map').style.background = '#b7dcd6';
 </script>
 <style>
-	.leaflet-map{position:absolute;inset:0;z-index:2}
+	.leaflet-map{position:absolute;inset:0;z-index:2;transition:transform 1s cubic-bezier(.2,.8,.2,1),filter 1s ease}.map.live-3d .leaflet-map{transform:perspective(950px) rotateX(7deg) scale(1.05);transform-origin:center 65%;filter:saturate(1.08) contrast(1.04)}.map.live-3d:before{content:'3D live view';position:absolute;left:22px;bottom:70px;z-index:5;padding:7px 9px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:rgba(20,32,29,.78);color:#fff;font-size:10px;font-weight:700;letter-spacing:.04em;box-shadow:0 8px 18px rgba(20,32,29,.2);backdrop-filter:blur(8px)}
 	.map:after{z-index:1;opacity:.16}
-	.map-overlay,.trip-strip{z-index:3}
+	.map-overlay,.trip-strip{z-index:3}.map .controls{opacity:.2;transform:translateX(7px);transition:opacity .2s ease,transform .2s ease}.map:hover .controls,.map:focus-within .controls{opacity:1;transform:translateX(0)}
 	.leaflet-control-attribution{font-size:9px}
 	.leaflet-routing-line{filter:drop-shadow(0 2px 2px rgba(20,32,29,.35))}
-	.live-location-button{border:0;background:#14201d;color:#fff;border-radius:10px;padding:11px 13px;font-size:11px;font-weight:700;box-shadow:0 8px 20px rgba(20,32,29,.2);white-space:nowrap}
-	.live-location-button:hover{background:#2778ff}
-	.live-pulse{display:inline-block;width:8px;height:8px;margin-right:5px;border-radius:50%;background:#2778ff;box-shadow:0 0 0 4px rgba(39,120,255,.2);vertical-align:middle}
+	.live-location-button{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.22);background:rgba(20,32,29,.94);color:#fff;border-radius:999px;padding:9px 12px 9px 10px;font-size:11px;font-weight:700;box-shadow:0 10px 24px rgba(20,32,29,.22),inset 0 1px 0 rgba(255,255,255,.12);white-space:nowrap;backdrop-filter:blur(12px);cursor:pointer;transition:background .22s ease,box-shadow .22s ease,transform .22s ease,border-color .22s ease}.live-location-button:hover{background:#2778ff;border-color:rgba(255,255,255,.5);box-shadow:0 12px 26px rgba(39,120,255,.3),inset 0 1px 0 rgba(255,255,255,.25);transform:translateY(-1px)}.live-location-button:active{transform:translateY(0) scale(.98)}.live-location-button:focus-visible{outline:3px solid rgba(184,232,106,.8);outline-offset:3px}.live-location-button[disabled]{cursor:wait;opacity:.9}.live-icon{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:rgba(255,255,255,.14);color:#9ed9ff}.live-icon svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8}.live-label{line-height:1}.live-arrow{color:#9ed9ff;font-size:14px;line-height:1;transition:transform .22s ease}.live-location-button:hover .live-arrow{transform:translateX(2px)}.live-pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9ed9ff;box-shadow:0 0 0 4px rgba(158,217,255,.18);animation:locationPulse 1.8s ease-in-out infinite}.live-location-button[data-state="success"]{background:#174e43;border-color:#68d8b5}.live-location-button[data-state="success"] .live-icon{background:#68d8b5;color:#123b32}.live-location-button[data-state="success"] .live-arrow{color:#b8e86a}@keyframes locationPulse{0%,100%{box-shadow:0 0 0 3px rgba(158,217,255,.16)}50%{box-shadow:0 0 0 6px rgba(158,217,255,.03)}}
+	@media (prefers-color-scheme: dark){:root{--ink:#eef5ed;--muted:#a9b8ad;--paper:#0d1512;--card:#17221e;--line:#2c3b34;--lime:#c8f36b;--orange:#ff805b;--teal:#68d8b5}body{background:var(--paper);color:var(--ink)}.card{background:var(--card);border-color:var(--line);box-shadow:0 18px 46px rgba(0,0,0,.25)}nav button{color:var(--muted)}nav button.active{color:var(--ink)}.pill,.controls{background:rgba(23,34,30,.92);border-color:#3a4d43}.pill span,.route-recommendation p,.field label,.stat span,.onboarding-copy,.onboarding-note,.onboarding-demo{color:var(--muted)}.metric{background:#07100d}.score .ring:after{background:var(--card)}.field input{background:#202e28;color:var(--ink);border-color:var(--line)}.challenge-box{background:#07100d}.settings-card,.onboarding-card{background:#17221e;color:var(--ink)}.settings-card select,.onboarding-form input,.onboarding-form select{background:#202e28;color:var(--ink);border-color:var(--line)}.settings-close,.challenge-close{background:#25352d;color:var(--ink)}.mission{background:#202e28;border-color:var(--line)}.safety-note{background:#3d341b;color:#f4d98a}.utility-button{background:#202e28;color:var(--ink);border-color:var(--line)}.route-recommendation{background:rgba(23,34,30,.94);border-color:#3a4d43}.onboarding{background:linear-gradient(135deg,#07100d 0%,#17382e 60%,#263a2f 160%)}.onboarding-form label{color:var(--ink)}.intro p{color:var(--muted)}}
 	.route-recommendation{position:absolute;z-index:4;left:22px;bottom:104px;width:245px;background:rgba(255,255,255,.94);border:1px solid #fff;border-radius:12px;padding:13px;box-shadow:0 8px 20px rgba(44,77,53,.16);backdrop-filter:blur(10px)}.route-recommendation strong{display:block;font-size:12px}.route-recommendation p{color:#76817b;font-size:10px;line-height:1.4;margin-top:4px}.route-recommendation button{margin-top:9px;border:0;border-radius:7px;background:#14201d;color:#fff;padding:8px 10px;font-size:10px;font-weight:700}.route-recommendation button.active{background:#43b99a;color:#14201d}.route-status{display:flex;gap:5px;margin-top:8px}.route-status i{width:7px;height:7px;border-radius:50%;display:block}.route-status i:first-child{background:#43b99a}.route-status i:last-child{background:#ff7046}.drive-focus{box-shadow:0 0 0 3px #ff7046,0 18px 46px rgba(26,47,35,.08)}
 	.onboarding{position:fixed;inset:0;z-index:40;display:grid;place-items:center;padding:22px;background:linear-gradient(135deg,#14201d 0%,#24463a 60%,#d8ead0 160%);overflow:auto}.onboarding.hidden{display:none}.onboarding-card{width:min(570px,100%);background:#f4f3ed;border-radius:22px;padding:31px;box-shadow:0 25px 90px rgba(0,0,0,.25)}.onboarding-brand{display:flex;align-items:center;gap:10px;color:#14201d;font-weight:700;font-size:18px}.onboarding-brand span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#b8e86a}.onboarding h1{font-size:34px;letter-spacing:-1.5px;margin:25px 0 8px}.onboarding-copy{color:#76817b;font-size:13px;line-height:1.5}.onboarding-form{display:grid;gap:13px;margin-top:23px}.onboarding-form label{color:#14201d;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}.onboarding-form input,.onboarding-form select{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #e3e7de;border-radius:9px;background:#fff;color:#14201d;outline:0}.onboarding-form input:focus,.onboarding-form select:focus{border-color:#43b99a}.onboarding-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consent{display:flex!important;gap:9px;align-items:start;text-transform:none!important;letter-spacing:0!important;color:#76817b!important;font-weight:400!important;line-height:1.4}.consent input{width:16px;margin:1px 0 0;accent-color:#43b99a}.onboarding-submit{border:0;border-radius:9px;padding:14px;background:#ff7046;color:#fff;font-size:12px;font-weight:700}.onboarding-demo{border:0;background:transparent;color:#76817b;font-size:11px;padding:4px}.onboarding-error{min-height:14px;color:#c34d2f;font-size:11px}.onboarding-note{color:#76817b;font-size:10px;line-height:1.4}@media(max-width:560px){.onboarding-card{padding:23px}.onboarding h1{font-size:29px}.onboarding-grid{grid-template-columns:1fr}}
-	.utility-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.utility-button{border:1px solid #e3e7de;background:#fff;color:#14201d;border-radius:8px;padding:8px 10px;font-size:10px;font-weight:700}.utility-button:hover{border-color:#43b99a}.privacy-note{display:flex;gap:8px;align-items:start;margin-top:14px;color:#76817b;font-size:10px;line-height:1.4}.privacy-note strong{color:#14201d}.safety-note{margin-top:14px;padding:10px 11px;border-radius:9px;background:#fff7dc;color:#72551c;font-size:10px;line-height:1.4}.map-error{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);display:none;background:#14201d;color:#fff;border-radius:10px;padding:12px;font-size:11px;text-align:center}.map-error.show{display:block}.settings-panel{position:fixed;inset:0;z-index:21;display:grid;place-items:center;padding:24px;background:rgba(20,32,29,.45);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}.settings-panel.open{opacity:1;pointer-events:auto}.settings-card{width:min(390px,100%);background:#f4f3ed;border-radius:18px;padding:24px;box-shadow:0 24px 80px rgba(20,32,29,.25)}.settings-card h2{margin:7px 0}.settings-card p{color:#76817b;font-size:12px;line-height:1.5}.settings-card label{display:block;margin-top:18px;color:#14201d;font-size:11px;font-weight:700}.settings-card select{width:100%;margin-top:7px;padding:10px;border:1px solid #e3e7de;border-radius:8px;background:#fff}.settings-close{float:right;border:0;background:#fff;border-radius:50%;width:30px;height:30px;font-size:18px}
+	.utility-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.utility-button{border:1px solid #e3e7de;background:#fff;color:#14201d;border-radius:8px;padding:8px 10px;font-size:10px;font-weight:700}.utility-button:hover{border-color:#43b99a}.route-type-row{display:grid;gap:8px;margin-top:12px}.route-type-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}.route-buttons{display:flex;gap:8px;flex-wrap:wrap}.route-choice{border:1px solid #e3e7de;background:#fff;color:#14201d;border-radius:8px;padding:8px 10px;font-size:10px;font-weight:700;cursor:pointer}.route-choice.active{background:#14201d;color:#fff;border-color:#14201d}.privacy-note{display:flex;gap:8px;align-items:start;margin-top:14px;color:#76817b;font-size:10px;line-height:1.4}.privacy-note strong{color:#14201d}.safety-note{margin-top:14px;padding:10px 11px;border-radius:9px;background:#fff7dc;color:#72551c;font-size:10px;line-height:1.4}.map-error{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);display:none;background:#14201d;color:#fff;border-radius:10px;padding:12px;font-size:11px;text-align:center}.map-error.show{display:block}.settings-panel{position:fixed;inset:0;z-index:21;display:grid;place-items:center;padding:24px;background:rgba(20,32,29,.45);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}.settings-panel.open{opacity:1;pointer-events:auto}.settings-card{width:min(390px,100%);background:#f4f3ed;border-radius:18px;padding:24px;box-shadow:0 24px 80px rgba(20,32,29,.25)}.settings-card h2{margin:7px 0}.settings-card p{color:#76817b;font-size:12px;line-height:1.5}.settings-card label{display:block;margin-top:18px;color:#14201d;font-size:11px;font-weight:700}.settings-card select{width:100%;margin-top:7px;padding:10px;border:1px solid #e3e7de;border-radius:8px;background:#fff}.settings-close{float:right;border:0;background:#fff;border-radius:50%;width:30px;height:30px;font-size:18px}
 	.challenge-modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:24px;background:rgba(20,32,29,.48);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:opacity .25s}.challenge-modal.open{opacity:1;pointer-events:auto}.challenge-panel{width:min(680px,100%);max-height:90vh;overflow:auto;background:#f4f3ed;border:1px solid #fff;border-radius:20px;box-shadow:0 24px 80px rgba(20,32,29,.25);padding:26px}.challenge-panel-head{display:flex;align-items:start;justify-content:space-between;margin-bottom:22px}.challenge-panel-head p{color:#76817b;font-size:13px;margin-top:7px}.challenge-close{width:34px;height:34px;border:0;border-radius:50%;background:#fff;color:#14201d;font-size:20px}.challenge-list{display:grid;gap:10px}.mission{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:13px;padding:15px;background:#fff;border:1px solid #e3e7de;border-radius:13px}.mission-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:11px;background:#e9f8c8;color:#14201d;font-weight:700;font-size:18px}.mission:nth-child(2) .mission-icon{background:#d9f2e8}.mission:nth-child(3) .mission-icon{background:#ffe2d8}.mission h3{font-size:14px}.mission p{color:#76817b;font-size:11px;margin-top:4px}.mission-progress{height:5px;margin-top:9px;background:#e7ebe3;border-radius:5px;overflow:hidden}.mission-progress i{display:block;height:100%;background:#ff7046;border-radius:5px}.mission-reward{color:#ff7046;font-size:11px;font-weight:700;text-align:right;white-space:nowrap}.mission-reward button{display:block;margin-top:8px;border:0;border-radius:7px;padding:7px 9px;background:#14201d;color:#fff;font-size:10px;font-weight:700}.mission-reward button:disabled{background:#dfe5dc;color:#76817b}.challenge-nav-active{color:#14201d!important;font-weight:700!important;border-bottom:2px solid #ff7046}
+	@media (prefers-color-scheme: dark){.onboarding-card,.settings-card,.challenge-panel{background:#17221e;color:#eef5ed}.onboarding-brand,.onboarding h1,.onboarding-form label,.settings-card h2{color:#eef5ed}.onboarding-form input,.onboarding-form select,.settings-card select{background:#202e28;color:#eef5ed;border-color:#2c3b34}.mission{background:#202e28;border-color:#2c3b34}.challenge-panel-head p,.challenge-panel p{color:#a9b8ad}.challenge-close,.settings-close{background:#25352d;color:#eef5ed}}
 </style>
 <div class="challenge-modal" id="challenge-modal" role="dialog" aria-modal="true" aria-labelledby="challenge-title">
 	<section class="challenge-panel">
@@ -72,27 +96,116 @@
 		mapElement.className = 'leaflet-map';
 		document.querySelector('.map').prepend(mapElement);
 
-		const keralaMap = L.map(mapElement, { zoomControl: false, scrollWheelZoom: false });
+		const keralaMap = L.map(mapElement, { zoomControl: false, scrollWheelZoom: false, wheelDebounceTime: 80, wheelPxPerZoomLevel: 100 });
+		mapElement.addEventListener('mouseenter', () => keralaMap.scrollWheelZoom.enable());
+		mapElement.addEventListener('mouseleave', () => keralaMap.scrollWheelZoom.disable());
 		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 			attribution: 'Tiles &copy; Esri | Kerala route prototype',
 			maxZoom: 18
 		}).addTo(keralaMap);
+		L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Labels &copy; Esri',
+			maxZoom: 18,
+			pane: 'overlayPane'
+		}).addTo(keralaMap);
 		L.control.zoom({ position: 'topright' }).addTo(keralaMap);
+		L.control.scale({ position: 'bottomleft', imperial: false, maxWidth: 90 }).addTo(keralaMap);
+		const mapButtons = document.querySelector('.controls').querySelectorAll('button');
+		mapButtons[0].title = 'Zoom in';
+		mapButtons[1].title = 'Zoom out';
+		mapButtons[2].title = 'Recenter route';
+		mapButtons[0].addEventListener('click', () => keralaMap.zoomIn());
+		mapButtons[1].addEventListener('click', () => keralaMap.zoomOut());
+		mapButtons[2].addEventListener('click', () => window.verdantFocusRoute ? window.verdantFocusRoute() : keralaMap.fitBounds(routeLine.getBounds(), { padding: [70, 70] }));
 
+		const ksrtcCoordinates = {
+			'Munnar, Kerala': [10.0889, 77.0595],
+			'Kochi, Kerala': [9.9312, 76.2673],
+			'Fort Kochi, Kerala': [9.9667, 76.2428],
+			'Ernakulam, Kerala': [9.9816, 76.2999],
+			'Kothamangalam, Kerala': [10.0647, 76.6350],
+			'Thiruvananthapuram, Kerala': [8.5241, 76.9366],
+			'Kollam, Kerala': [8.8932, 76.6141],
+			'Pathanamthitta, Kerala': [9.2648, 76.7870],
+			'Alappuzha, Kerala': [9.4981, 76.3388],
+			'Alappuzha Backwaters, Kerala': [9.4981, 76.3388],
+			'Kottayam, Kerala': [9.5916, 76.5222],
+			'Idukki, Kerala': [9.8494, 76.9720],
+			'Thrissur, Kerala': [10.5276, 76.2144],
+			'Palakkad, Kerala': [10.7867, 76.6548],
+			'Malappuram, Kerala': [11.0510, 76.0711],
+			'Kozhikode, Kerala': [11.2588, 75.7804],
+			'Wayanad, Kerala': [11.6854, 76.1320],
+			'Kannur, Kerala': [11.8745, 75.3704],
+			'Kasaragod, Kerala': [12.4996, 74.9869],
+			'Varkala, Kerala': [8.7379, 76.7163],
+			'Thekkady, Kerala': [9.6031, 77.1610],
+			'Bekal, Kerala': [12.3925, 75.0330],
+			'Vagamon, Kerala': [9.6867, 76.9075],
+			'Athirappilly, Kerala': [10.2850, 76.5690],
+			'Kovalam, Kerala': [8.4009, 76.9787],
+			'Neyyattinkara, Kerala': [8.3988, 77.0815],
+			'Nedumangad, Kerala': [8.6027, 77.0013],
+			'Attingal, Kerala': [8.6961, 76.8151],
+			'Changanassery, Kerala': [9.4420, 76.5360],
+			'Pala, Kerala': [9.7167, 76.7167],
+			'Thodupuzha, Kerala': [9.8959, 76.7180],
+			'Muvattupuzha, Kerala': [9.9847, 76.5793],
+			'Perumbavoor, Kerala': [10.1060, 76.4737],
+			'Angamaly, Kerala': [10.1960, 76.3860],
+			'North Paravur, Kerala': [10.1451, 76.2265],
+			'Chalakudy, Kerala': [10.3070, 76.3310],
+			'Irinjalakuda, Kerala': [10.3427, 76.2110],
+			'Kodungallur, Kerala': [10.2239, 76.1990],
+			'Guruvayur, Kerala': [10.5943, 76.0411],
+			'Kunnamkulam, Kerala': [10.6500, 76.0833],
+			'Ottapalam, Kerala': [10.7700, 76.3780],
+			'Shoranur, Kerala': [10.7611, 76.2700],
+			'Mannarkkad, Kerala': [10.9930, 76.4650],
+			'Cherpulassery, Kerala': [10.8760, 76.3120],
+			'Vadakkenchery, Kerala': [10.5840, 76.4730],
+			'Tirur, Kerala': [10.9137, 75.9218],
+			'Kottakkal, Kerala': [10.9970, 76.0010],
+			'Perinthalmanna, Kerala': [10.9770, 76.2260],
+			'Nilambur, Kerala': [11.2810, 76.2250],
+			'Kondotty, Kerala': [11.1450, 75.9670],
+			'Feroke, Kerala': [11.1800, 75.8410],
+			'Vadakara, Kerala': [11.6085, 75.5917],
+			'Thalassery, Kerala': [11.7480, 75.4890],
+			'Payyannur, Kerala': [12.0935, 75.2025],
+			'Taliparamba, Kerala': [12.0410, 75.3590],
+			'Kanhangad, Kerala': [12.3080, 75.0960],
+			'Nileshwar, Kerala': [12.2580, 75.1350],
+			'Adoor, Kerala': [9.1550, 76.7300],
+			'Ranni, Kerala': [9.3820, 76.7850],
+			'Konni, Kerala': [9.2290, 76.8490],
+			'Chengannur, Kerala': [9.3150, 76.6150],
+			'Haripad, Kerala': [9.2847, 76.4550],
+			'Cherthala, Kerala': [9.6850, 76.3350],
+			'Kayamkulam, Kerala': [9.1817, 76.5000],
+			'Karunagappally, Kerala': [9.0570, 76.5350],
+			'Punalur, Kerala': [9.0020, 76.9250],
+			'Kattappana, Kerala': [9.7590, 77.1130],
+			'Kumily, Kerala': [9.5940, 77.1620],
+			'Nedumkandam, Kerala': [9.8500, 77.1500]
+		};
+		window.verdantCoordinates = ksrtcCoordinates;
 		const route = [
 			[9.9312, 76.2673],
-			[10.0165, 76.3040],
-			[10.0647, 76.6350],
-			[10.0889, 77.0595]
+			[9.8200, 76.3900],
+			[9.5916, 76.5222]
 		];
 		const routeLine = L.polyline(route, { color: '#ff7046', weight: 6, opacity: .96, className: 'leaflet-routing-line' }).addTo(keralaMap);
 		L.circleMarker(route[0], { radius: 8, color: '#ff7046', weight: 4, fillColor: '#fff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Kochi', { permanent: false });
-		L.circleMarker(route[route.length - 1], { radius: 8, color: '#14201d', weight: 4, fillColor: '#fff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Munnar', { permanent: false });
+		L.circleMarker(route[route.length - 1], { radius: 8, color: '#14201d', weight: 4, fillColor: '#fff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Kottayam', { permanent: false });
 		keralaMap.fitBounds(routeLine.getBounds(), { padding: [70, 70] });
 
-		const destination = route[route.length - 1];
-		const destinationMarker = L.marker(destination).addTo(keralaMap).bindTooltip('Munnar destination', { permanent: false });
+		let destination = route[route.length - 1];
+		let destinationMarker = L.marker(destination).addTo(keralaMap).bindTooltip('Kottayam destination', { permanent: false });
 		let liveLocation = route[0];
+		let roadDistanceKm = null;
+		let roadDurationMinutes = null;
+		let selectedDestinationName = '';
 		let locationMarker = L.circleMarker(liveLocation, { radius: 9, color: '#fff', weight: 4, fillColor: '#2778ff', fillOpacity: 1 }).addTo(keralaMap).bindTooltip('Preview location: Kochi', { permanent: false });
 		window.verdantClearLocation = () => { locationMarker.setStyle({ opacity: 0, fillOpacity: 0 }); };
 		let previewLine = L.polyline([liveLocation, ...route.slice(1)], { color: '#ff7046', weight: 6, opacity: .96 }).addTo(keralaMap);
@@ -100,6 +213,63 @@
 		const fastestRoute = L.polyline([liveLocation, [10.0165, 76.3040], [10.0647, 76.6350], destination], { color: '#ff7046', weight: 4, opacity: .35, dashArray: '7 8' }).addTo(keralaMap);
 		const comfortRoute = L.polyline([liveLocation, [9.9850, 76.3650], [10.0200, 76.5200], [10.0700, 76.8000], destination], { color: '#43b99a', weight: 7, opacity: .95 }).addTo(keralaMap);
 		const ecoRoute = L.polyline([liveLocation, [9.9900, 76.4200], [10.0400, 76.7000], destination], { color: '#b8e86a', weight: 4, opacity: .75, dashArray: '3 7' }).addTo(keralaMap);
+		const updateDestination = async (locationName) => {
+			const point = window.verdantCoordinates[locationName];
+			if (!point) return;
+			selectedDestinationName = locationName;
+			destination = point;
+			roadDistanceKm = null;
+			roadDurationMinutes = null;
+			destinationMarker.setLatLng(point).setTooltipContent(`${locationName} destination`);
+			const fallbackRoute = [liveLocation, [(liveLocation[0] + point[0]) / 2, (liveLocation[1] + point[1]) / 2], point];
+			let roadRoute = fallbackRoute;
+			try {
+				const response = await fetch(`https://router.project-osrm.org/route/v1/driving/${liveLocation[1]},${liveLocation[0]};${point[1]},${point[0]}?overview=full&geometries=geojson`);
+				const data = await response.json();
+				if (data.routes?.[0]?.geometry?.coordinates) roadRoute = data.routes[0].geometry.coordinates.map(([longitude, latitude]) => [latitude, longitude]);
+				if (data.routes?.[0]) {
+					roadDistanceKm = data.routes[0].distance / 1000;
+					roadDurationMinutes = Math.max(1, Math.round(data.routes[0].duration / 60));
+				}
+			} catch (error) {
+				// Keep the coordinate-accurate fallback when routing is unavailable.
+			}
+			if (!Number.isFinite(roadDistanceKm)) roadDistanceKm = roadRoute.reduce((total, point, index) => index ? total + distanceKm(roadRoute[index - 1], point) : total, 0);
+			if (!Number.isFinite(roadDurationMinutes)) roadDurationMinutes = Math.max(1, Math.round((roadDistanceKm / 38) * 60));
+			const INDIA_MAX_SPEED_KMH = 80;
+			const minimumSafeMinutes = (roadDistanceKm / INDIA_MAX_SPEED_KMH) * 60;
+			const indiaHour = Number(new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false }).format(new Date()));
+			const peakMultiplier = (indiaHour >= 7 && indiaHour < 11) || (indiaHour >= 16 && indiaHour < 21) ? 1.28 : indiaHour >= 11 && indiaHour < 16 ? 1.1 : 1.04;
+			roadDurationMinutes = Math.max(1, Math.ceil(Math.max(roadDurationMinutes, minimumSafeMinutes) * peakMultiplier));
+			const routeHours = Math.floor(roadDurationMinutes / 60);
+			const routeRemainder = roadDurationMinutes % 60;
+			const averageSpeed = roadDistanceKm / (roadDurationMinutes / 60);
+			const trafficLabel = peakMultiplier >= 1.28 || averageSpeed < 25 ? 'Peak traffic estimate' : peakMultiplier > 1.04 || averageSpeed < 40 ? 'Moderate traffic estimate' : 'Light traffic estimate';
+			const updateFuelImpact = () => {
+				const fuelUse = Number(document.querySelector('#fuel-usage')?.value);
+				const vehicle = JSON.parse(localStorage.getItem('verdant-profile') || '{}').vehicle || '';
+				const emissionsFactor = vehicle.includes('Diesel') ? 2.68 : vehicle.includes('Electric') ? .42 : 2.31;
+				const fuelLitres = roadDistanceKm * (Number.isFinite(fuelUse) ? fuelUse : 0) / 100;
+				const co2 = fuelLitres * emissionsFactor;
+				document.querySelectorAll('.metric b')[2].textContent = Number.isFinite(co2) && co2 > 0 ? `${co2.toFixed(1)} kg` : '--';
+				document.querySelectorAll('.metric span')[2].textContent = vehicle.includes('Electric') ? 'estimated CO2 from energy' : 'CO2 from fuel use';
+			};
+			window.verdantRefreshFuel = updateFuelImpact;
+			updateFuelImpact();
+			document.querySelector('.metric b').textContent = `${Math.round(roadDistanceKm)} km`;
+			document.querySelectorAll('.metric b')[1].textContent = routeHours ? `${routeHours} hr ${routeRemainder} min` : `${routeRemainder} min`;
+			document.querySelectorAll('.metric span')[0].textContent = 'road distance';
+			document.querySelectorAll('.metric span')[1].textContent = 'road ETA';
+			document.querySelector('.pill span').textContent = `${Math.round(roadDistanceKm)} km road route · ${trafficLabel}`;
+			document.querySelector('.tip').textContent = `${trafficLabel} · India max ${INDIA_MAX_SPEED_KMH} km/h · +18 XP green route bonus`;
+			fastestRoute.setLatLngs(roadRoute);
+			comfortRoute.setLatLngs(roadRoute);
+			ecoRoute.setLatLngs(roadRoute);
+			previewLine.setLatLngs([liveLocation, ...roadRoute.slice(1)]);
+			keralaMap.fitBounds(L.latLngBounds(roadRoute), { padding: [70, 70] });
+			if (window.verdantHighlightRoute) window.verdantHighlightRoute(window.verdantSelectedRoute || 'comfort');
+		};
+		window.verdantSetDestination = updateDestination;
 		previewLine.setStyle({ opacity: 0 });
 		const routeRecommendation = document.createElement('div');
 		routeRecommendation.className = 'route-recommendation';
@@ -109,11 +279,18 @@
 			fastestRoute.setStyle({ opacity: routeName === 'fastest' ? .95 : .22, weight: routeName === 'fastest' ? 7 : 4 });
 			comfortRoute.setStyle({ opacity: routeName === 'comfort' ? .98 : .22, weight: routeName === 'comfort' ? 8 : 4 });
 			ecoRoute.setStyle({ opacity: routeName === 'eco' ? .95 : .22, weight: routeName === 'eco' ? 7 : 4 });
-			routeRecommendation.querySelector('button').textContent = `${routeName[0].toUpperCase() + routeName.slice(1)} route highlighted`;
+			const routeLabels = { comfort: 'Comfort', fastest: 'Fast', eco: 'Eco' };
+			const routeCopy = { comfort: 'Smoother hill sections for a calmer drive.', fastest: 'Quickest estimated arrival for this preview.', eco: 'Lowest-impact option with a gentler pace.' };
+			routeRecommendation.querySelector('strong').textContent = `${routeLabels[routeName]} route selected`;
+			routeRecommendation.querySelector('p').textContent = routeCopy[routeName];
+			routeRecommendation.querySelector('button').textContent = `${routeLabels[routeName]} route highlighted`;
+			window.verdantSelectedRoute = routeName;
 		};
+		window.verdantHighlightRoute = highlightRoute;
 		routeRecommendation.querySelector('button').addEventListener('click', () => highlightRoute('comfort'));
-		highlightRoute('comfort');
-		window.verdantFocusRoute = () => { keralaMap.fitBounds(comfortRoute.getBounds(), { padding: [90, 90], maxZoom: 11 }); highlightRoute('comfort'); };
+		highlightRoute(window.verdantPendingRoute || 'comfort');
+		window.verdantMapReady = true;
+		window.verdantFocusRoute = () => { const selectedRoute = window.verdantSelectedRoute || 'comfort'; const selectedLine = selectedRoute === 'fastest' ? fastestRoute : selectedRoute === 'eco' ? ecoRoute : comfortRoute; keralaMap.fitBounds(selectedLine.getBounds(), { padding: [90, 90], maxZoom: 11 }); highlightRoute(selectedRoute); };
 
 		const distanceKm = (a, b) => {
 			const earthRadius = 6371;
@@ -122,12 +299,13 @@
 			const value = Math.sin(lat / 2) ** 2 + Math.cos(a[0] * Math.PI / 180) * Math.cos(b[0] * Math.PI / 180) * Math.sin(lon / 2) ** 2;
 			return earthRadius * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
 		};
-		const updatePreview = (position, label) => {
+		const updatePreview = (position, label, liveMode = false) => {
 			liveLocation = position;
+			document.querySelector('.map').classList.toggle('live-3d', liveMode);
 			locationMarker.setLatLng(position).setTooltipContent('Live location: ' + label);
 			previewLine.setLatLngs([position, ...route.slice(1)]);
-			const kilometers = distanceKm(position, destination) * 1.12;
-			const minutes = Math.round((kilometers / 38) * 60);
+			const kilometers = roadDistanceKm ?? distanceKm(position, destination) * 1.12;
+			const minutes = roadDurationMinutes ?? Math.round((kilometers / 38) * 60);
 			const hours = Math.floor(minutes / 60);
 			const remaining = minutes % 60;
 			const eta = hours ? `${hours} hr ${remaining} min` : `${minutes} min`;
@@ -135,11 +313,14 @@
 			document.querySelectorAll('.metric b')[1].textContent = eta;
 			document.querySelectorAll('.metric span')[0].textContent = 'route distance';
 			document.querySelectorAll('.metric span')[1].textContent = 'live ETA';
-			keralaMap.fitBounds(previewLine.getBounds(), { padding: [70, 70] });
+			keralaMap.flyTo(position, 13, { duration: 1.15, easeLinearity: .2 });
+			if (selectedDestinationName) updateDestination(selectedDestinationName);
 		};
 		const locationButton = document.createElement('button');
 		locationButton.className = 'live-location-button';
-		locationButton.innerHTML = '<span class="live-pulse"></span> Use live location';
+		locationButton.type = 'button';
+		locationButton.setAttribute('aria-live', 'polite');
+		locationButton.innerHTML = '<span class="live-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="live-label">Use live location</span><span class="live-arrow" aria-hidden="true">&#8594;</span>';
 		locationButton.title = 'Preview the route from your current location';
 		document.querySelector('.map-overlay').appendChild(locationButton);
 		const showToast = (message) => {
@@ -149,18 +330,26 @@
 			setTimeout(() => toast.classList.remove('show'), 2800);
 		};
 		locationButton.addEventListener('click', () => {
+			if (locationButton.disabled) return;
 			if (!navigator.geolocation) {
+				locationButton.dataset.state = 'fallback';
 				showToast('Live location is not available here. Showing Kochi preview.');
 				return;
 			}
-			locationButton.innerHTML = '<span class="live-pulse"></span> Finding you...';
+			locationButton.disabled = true;
+			locationButton.dataset.state = 'loading';
+			locationButton.innerHTML = '<span class="live-icon" aria-hidden="true"><span class="live-pulse"></span></span><span class="live-label">Finding you...</span>';
 			navigator.geolocation.getCurrentPosition((current) => {
-				updatePreview([current.coords.latitude, current.coords.longitude], 'you are here');
-				locationButton.innerHTML = '<span class="live-pulse"></span> Live location on';
+				updatePreview([current.coords.latitude, current.coords.longitude], 'you are here', true);
+				locationButton.disabled = false;
+				locationButton.dataset.state = 'success';
+				locationButton.innerHTML = '<span class="live-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/><path d="m9 9 2 2 4-4"/></svg></span><span class="live-label">Live location on</span><span class="live-arrow" aria-hidden="true">&#10003;</span>';
 				showToast('Route preview updated from your live location.');
 			}, () => {
 				updatePreview(route[0], 'Kochi preview');
-				locationButton.innerHTML = '<span class="live-pulse"></span> Kochi preview';
+				locationButton.disabled = false;
+				locationButton.dataset.state = 'fallback';
+				locationButton.innerHTML = '<span class="live-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></span><span class="live-label">Kochi preview</span><span class="live-arrow" aria-hidden="true">&#8594;</span>';
 				showToast('Location permission was unavailable, so Kochi is used as the preview start.');
 			}, { enableHighAccuracy: true, timeout: 8000 });
 		});
@@ -208,19 +397,32 @@
 		document.querySelector('.ring').style.setProperty('--score', `${savedScore}%`);
 	}
 	const tripCard = document.querySelector('.trip');
-	tripCard.insertAdjacentHTML('beforeend', '<div class="utility-row"><button class="utility-button" id="route-options">Route options</button><button class="utility-button" id="privacy-button">Location privacy</button></div><div class="privacy-note" id="privacy-note"><span>●</span><span><strong>Location is off.</strong> Use live location only when you choose it. Nothing is saved by this prototype.</span></div><div class="safety-note"><strong>Safety first:</strong> set your route before driving. Verdant never asks you to interact with the screen while moving.</div>');
-	const routeOptions = document.querySelector('#route-options');
-	routeOptions.addEventListener('click', () => {
-		const destination = document.querySelectorAll('.field input')[0];
-		const routes = ['Munnar, Kerala', 'Alappuzha, Kerala', 'Varkala, Kerala'];
-		const current = routes.indexOf(destination.value);
-		destination.value = routes[(current + 1) % routes.length];
-		document.querySelector('.pill strong').textContent = destination.value === 'Munnar, Kerala' ? 'Kochi to Munnar' : `Kochi to ${destination.value.split(',')[0]}`;
-		document.querySelector('.pill span').textContent = 'Preview route selected';
+	tripCard.insertAdjacentHTML('beforeend', '<div class="fuel-actions"><label for="fuel-usage">Vehicle fuel use</label><input id="fuel-usage" type="number" min="0" step="0.1" value="6.5" inputmode="decimal"><span>Litres per 100 km</span><button class="utility-button" id="obd-connect" type="button">Connect OBD-II</button><small id="obd-status">Manual fuel use</small></div>');
+	tripCard.insertAdjacentHTML('beforeend', '<div class="utility-row route-type-row"><div class="route-type-label">Route type</div><div class="route-buttons"><button class="route-choice active" data-route="comfort">Comfort</button><button class="route-choice" data-route="fastest">Fast</button><button class="route-choice" data-route="eco">Eco</button></div></div><div class="utility-row"><button class="utility-button" id="privacy-button">Location privacy</button></div><div class="privacy-note" id="privacy-note"><span>●</span><span><strong>Location is off.</strong> Use live location only when you choose it. Nothing is saved by this prototype.</span></div><div class="safety-note"><strong>Safety first:</strong> set your route before driving. Verdant never asks you to interact with the screen while moving.</div>');
+	const fuelUsageInput = document.querySelector('#fuel-usage');
+	fuelUsageInput.value = localStorage.getItem('verdant-fuel-use') || fuelUsageInput.value;
+	fuelUsageInput.addEventListener('input', () => { localStorage.setItem('verdant-fuel-use', fuelUsageInput.value); if (window.verdantRefreshFuel) window.verdantRefreshFuel(); });
+	document.querySelector('#obd-connect').addEventListener('click', async () => {
+		const status = document.querySelector('#obd-status');
+		if (!navigator.bluetooth) { status.textContent = 'Bluetooth unavailable; use manual fuel use'; return; }
+		try {
+			status.textContent = 'Searching for OBD-II adapter...';
+			const device = await navigator.bluetooth.requestDevice({ acceptAllDevices: true });
+			status.textContent = `${device.name || 'OBD-II adapter'} selected; live fuel PID setup needed`;
+		} catch (error) {
+			status.textContent = 'No adapter connected; using manual fuel use';
+		}
+	});
+	document.querySelectorAll('.route-choice').forEach((choice) => {
+		choice.addEventListener('click', () => {
+			document.querySelectorAll('.route-choice').forEach((button) => button.classList.toggle('active', button === choice));
+			window.verdantPendingRoute = choice.dataset.route;
+			if (window.verdantHighlightRoute) window.verdantHighlightRoute(choice.dataset.route);
+		});
 	});
 	const settingsPanel = document.createElement('div');
 	settingsPanel.className = 'settings-panel';
-	settingsPanel.innerHTML = '<section class="settings-card" role="dialog" aria-modal="true"><button class="settings-close" aria-label="Close settings">&times;</button><div class="eyebrow">Your controls</div><h2>Privacy and units</h2><p>Choose how Verdant presents your trip. Location preview stays local to this browser prototype.</p><label for="unit-choice">Distance units</label><select id="unit-choice"><option value="km">Kilometres (km)</option><option value="mi">Miles (mi)</option></select><label for="language-choice">Language</label><select id="language-choice"><option>English</option><option>Malayalam (coming next)</option></select></section>';
+	settingsPanel.innerHTML = '<section class="settings-card" role="dialog" aria-modal="true"><button class="settings-close" aria-label="Close settings">&times;</button><div class="eyebrow">Your controls</div><h2>Privacy and units</h2><p>Choose how Verdant presents your trip. Location preview stays local to this browser prototype.</p><label for="unit-choice">Distance units</label><select id="unit-choice"><option value="km">Kilometres (km)</option><option value="mi">Miles (mi)</option></select></section>';
 	document.body.appendChild(settingsPanel);
 	const unitChoice = settingsPanel.querySelector('#unit-choice');
 	unitChoice.value = localStorage.getItem('verdant-units') || 'km';
@@ -305,6 +507,117 @@
 		showDashboard(profile);
 	});
 	document.querySelector('#onboarding-demo').addEventListener('click', () => showDashboard(null));
+</script>
+<script>
+	const keralaLocations = ['Thiruvananthapuram, Kerala', 'Kollam, Kerala', 'Pathanamthitta, Kerala', 'Alappuzha, Kerala', 'Kottayam, Kerala', 'Kothamangalam, Kerala', 'Idukki, Kerala', 'Ernakulam, Kerala', 'Kochi, Kerala', 'Thrissur, Kerala', 'Palakkad, Kerala', 'Malappuram, Kerala', 'Kozhikode, Kerala', 'Wayanad, Kerala', 'Kannur, Kerala', 'Kasaragod, Kerala', 'Munnar, Kerala', 'Alappuzha Backwaters, Kerala', 'Varkala, Kerala', 'Thekkady, Kerala', 'Bekal, Kerala', 'Vagamon, Kerala', 'Athirappilly, Kerala', 'Kovalam, Kerala', 'Fort Kochi, Kerala'];
+	const destinationInput = document.querySelector('#destination-input');
+	const destinationPicker = document.querySelector('.destination-picker');
+	const destinationSuggestions = document.querySelector('#destination-suggestions');
+	let lastValidDestination = destinationInput.value || '';
+	const setSelectionLabel = (value) => {
+		const place = value && value.split(',')[0];
+		const label = place ? `Kochi to ${place}` : 'Choose a destination';
+		document.querySelector('.pill strong').textContent = label;
+		document.querySelector('.pill span').textContent = value ? 'Route preview updated' : 'Lowest-impact route available';
+	};
+	const resolveValidDestination = (value) => {
+		const raw = (value || '').trim();
+		if (!raw) return lastValidDestination;
+		const exactMatch = keralaLocations.find((location) => location.toLowerCase() === raw.toLowerCase());
+		if (exactMatch) {
+			lastValidDestination = exactMatch;
+			return exactMatch;
+		}
+		const prefixMatch = keralaLocations.find((location) => location.toLowerCase().startsWith(raw.toLowerCase()));
+		if (prefixMatch) {
+			lastValidDestination = prefixMatch;
+			return prefixMatch;
+		}
+		return lastValidDestination;
+	};
+	const renderSuggestions = (query = '') => {
+		const term = query.trim().toLowerCase();
+		const matches = keralaLocations.filter((location) => location.toLowerCase().includes(term));
+		if (!matches.length) {
+			destinationSuggestions.innerHTML = '<div class="destination-empty">No Kerala stop found</div>';
+			destinationPicker.classList.toggle('active', document.activeElement === destinationInput);
+			destinationSuggestions.style.display = (document.activeElement === destinationInput) ? 'grid' : 'none';
+			return;
+		}
+		destinationSuggestions.innerHTML = matches.map((location) => `
+			<button type="button" class="destination-option ${location === destinationInput.value ? 'active' : ''}" data-location="${location}">${location}</button>
+		`).join('');
+		destinationSuggestions.querySelectorAll('.destination-option').forEach((button) => {
+			button.addEventListener('click', () => {
+				destinationInput.value = button.dataset.location;
+				lastValidDestination = button.dataset.location;
+				setSelectionLabel(button.dataset.location);
+				if (window.verdantSetDestination) window.verdantSetDestination(button.dataset.location);
+				if (window.verdantHighlightRoute) window.verdantHighlightRoute('comfort');
+				destinationPicker.classList.remove('active');
+				destinationSuggestions.style.display = 'none';
+			});
+		});
+		destinationPicker.classList.toggle('active', document.activeElement === destinationInput || !!term);
+		destinationSuggestions.style.display = (document.activeElement === destinationInput || !!term) ? 'grid' : 'none';
+	};
+	destinationInput.addEventListener('focus', () => renderSuggestions(destinationInput.value));
+	destinationInput.addEventListener('input', () => {
+		const query = destinationInput.value.trim();
+		if (!query) {
+			renderSuggestions('');
+			return;
+		}
+		renderSuggestions(query);
+	});
+	destinationInput.addEventListener('keydown', (event) => {
+		if (event.key === 'Enter') {
+			event.preventDefault();
+			const value = destinationInput.value.trim();
+			const match = keralaLocations.find((location) => {
+				const lower = location.toLowerCase();
+				return lower === value.toLowerCase() || lower.includes(value.toLowerCase());
+			});
+			if (match) {
+				destinationInput.value = match;
+				lastValidDestination = match;
+				setSelectionLabel(match);
+				if (window.verdantSetDestination) window.verdantSetDestination(match);
+				if (window.verdantHighlightRoute) window.verdantHighlightRoute('comfort');
+			} else {
+				destinationInput.value = lastValidDestination;
+				setSelectionLabel(lastValidDestination);
+			}
+			destinationPicker.classList.remove('active');
+			destinationSuggestions.style.display = 'none';
+		}
+	});
+	destinationInput.addEventListener('change', () => {
+		const chosen = resolveValidDestination(destinationInput.value);
+		destinationInput.value = chosen;
+		setSelectionLabel(chosen);
+		if (window.verdantSetDestination) window.verdantSetDestination(chosen);
+		if (window.verdantHighlightRoute) window.verdantHighlightRoute('comfort');
+	});
+	destinationInput.addEventListener('blur', () => {
+		setTimeout(() => {
+			const chosen = resolveValidDestination(destinationInput.value);
+			destinationInput.value = chosen;
+			setSelectionLabel(chosen);
+			if (window.verdantSetDestination) window.verdantSetDestination(chosen);
+			if (window.verdantHighlightRoute) window.verdantHighlightRoute('comfort');
+			destinationPicker.classList.remove('active');
+			destinationSuggestions.style.display = 'none';
+		}, 100);
+	});
+
+document.addEventListener('click', (event) => {
+		if (!destinationPicker.contains(event.target)) {
+			destinationPicker.classList.remove('active');
+			destinationSuggestions.style.display = 'none';
+		}
+	});
+	setSelectionLabel(destinationInput.value);
 </script>
 </body>
 </html>
